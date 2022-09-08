@@ -1,0 +1,18 @@
+.hero {
+  background: url('/src/assets/images/hero/hero-bakground.jpg') no-repeat;
+}
+
+.container-main {
+  margin-left: 7.3%;
+  margin-right: 7.3%;
+}
+
+.hero-content {
+  &__pre-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
