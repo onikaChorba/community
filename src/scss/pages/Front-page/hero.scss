@@ -1,0 +1,46 @@
+.hero {
+  background: url('/src/assets/images/hero/hero-bakground.jpg') no-repeat;
+  background-size: cover;
+}
+
+.container-main {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.main-title {
+  &__pre-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    text-transform: uppercase;
+    padding-top: 128px;
+  }
+
+  &__title {
+    color: $white;
+    max-width: 39.5%;
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+
+  &__button {
+    max-width: 214px;
+    max-height: 64px;
+  }
+
+  &__list {
+    padding-top: 64px;
+    padding-bottom: 128px;
+    color: $white;
+    max-width: 20.5%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    li {
+      padding-left: 12px;
+    }
+  }
+}
