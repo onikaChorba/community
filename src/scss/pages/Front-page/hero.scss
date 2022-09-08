@@ -1,5 +1,6 @@
 .hero {
   background: url('/src/assets/images/hero/hero-bakground.jpg') no-repeat;
+
 }
 
 .container-main {
@@ -7,12 +8,24 @@
   margin-right: 7.3%;
 }
 
-.hero-content {
+.main-title {
+
   &__pre-title {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
     color: $white;
     text-transform: uppercase;
+    margin-top: 128px;
+  }
+
+  &__title {
+    color: $white;
+    max-width: 39.5%;
+  }
+
+  &__button {
+    max-width: 214px;
+    max-height: 64px;
   }
 }
