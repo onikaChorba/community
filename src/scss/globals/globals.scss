@@ -10,6 +10,18 @@ $button-active: #F2C79B;
 
 * {
   font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 //heading
@@ -50,8 +62,4 @@ $button-active: #F2C79B;
     font-size: 16px;
     line-height: 24px;
   }
-}
-
-div {
-  background: $primary;
 }

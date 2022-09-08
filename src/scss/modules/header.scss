@@ -1,0 +1,73 @@
+.header {
+  background: #0D0D0D;
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  &__nav-bars {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-bar {
+  &__logo {
+    margin-left: 7.3%;
+    margin-right: 4.4%;
+  }
+
+  &__links {
+    margin-left: 4.3%;
+
+    a {
+      margin-right: 48px;
+    }
+  }
+
+  &__button {
+    margin-right: 7.3%;
+  }
+}
+
+.logo {
+  max-width: 132px;
+  width: 100%;
+}
+
+.link {
+  a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $white;
+    opacity: 0.9;
+  }
+}
+
+.button {
+  width: 179px;
+  height: 56px;
+  background: $primary;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #1C1D28;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &:hover {
+    background: $button-active;
+    transition-duration: 2s;
+  }
+}
