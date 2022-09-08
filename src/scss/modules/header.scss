@@ -11,7 +11,12 @@
 }
 
 .nav-bar {
+  height: 100%;
+
   &__logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
     margin-left: 7.3%;
     margin-right: 4.4%;
   }
@@ -29,6 +34,12 @@
   }
 }
 
+.nav-bar__logo:after {
+  content: "";
+  border-right: 2px solid $white;
+  opacity: 0.1;
+}
+
 .logo {
   max-width: 132px;
   width: 100%;
@@ -43,11 +54,17 @@
     text-transform: uppercase;
     color: $white;
     opacity: 0.9;
+
+    &:hover {
+      color: $primary;
+      transition-duration: 2s;
+    }
   }
 }
 
 .button {
-  width: 179px;
+  max-width: 180px;
+  width: 100%;
   height: 56px;
   background: $primary;
   border-radius: 12px;
