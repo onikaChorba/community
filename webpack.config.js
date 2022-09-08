@@ -23,7 +23,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
-            template: path.resolve(__dirname, './src/index.html'), // шаблон
+            template: path.resolve(__dirname, './src/front-page.html'), // шаблон
             filename: 'index.html', // название выходного файла
         }),
         new CleanWebpackPlugin(),
@@ -38,6 +38,10 @@ module.exports = {
                 use: ['babel-loader'],
             },
             {
+                test: /\.(html)$/,
+                use: ['html-loader'],
+            },
+            {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
             },
@@ -50,5 +54,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
         ],
+
     }
+
 }
