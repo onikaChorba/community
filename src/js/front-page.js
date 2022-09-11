@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-
+  // setInterval(() => animateImgCircle(), 5000)
 })
 
 
 function animateImgCircle() {
   const images = document.querySelectorAll('.image');
   let zeroTop = 0;
-  let zeroleft = 0;
+  let zeroLeft = 0;
   let zeroTransform = "";
   for (let i = 0; i < images.length; i++) {
     let currentElement = images[i];
@@ -15,7 +15,7 @@ function animateImgCircle() {
       zeroTop = window
         .getComputedStyle(currentElement, null)
         .getPropertyValue('top');
-      zeroleft = window
+      zeroLeft = window
         .getComputedStyle(currentElement, null)
         .getPropertyValue('left');
       zeroTransform = window
@@ -38,7 +38,7 @@ function animateImgCircle() {
       currentElement.style.transform = nextTransform;
     } else {
       currentElement.style.top = zeroTop;
-      currentElement.style.left = zeroleft;
+      currentElement.style.left = zeroLeft;
       currentElement.style.transform = zeroTransform;
     }
   }
