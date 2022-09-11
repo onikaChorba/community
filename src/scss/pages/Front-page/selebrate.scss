@@ -1,0 +1,33 @@
+.selebrate-title {
+  padding-top: 64px;
+  padding-bottom: 128px;
+
+  &__text {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.link a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #161722;
+  font-family: 'Roboto', sans-serif;
+}
+
+.link {
+  &__arrow {
+    color: #33343E;
+    width: 38px;
+    height: 20px;
+    padding-right: 6px;
+  }
+}
