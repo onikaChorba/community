@@ -34,25 +34,17 @@
   &__info {
     position: absolute;
     z-index: 1000;
-    background: linear-gradient(184.38deg, rgba(6, 6, 6, 0.76) 16.68%, rgba(0, 0, 0, 0.02) 96.44%);
-    // top: 197px;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
+    background: linear-gradient(184.38deg, #060606 2%, rgba(0, 0, 0, 0.02) 96.44%);
     transform: translateY(100%);
     transition: all 0.3s ease;
   }
 }
 
 .article:hover {
-
-
   .article__info {
     transform: translateY(50%);
     transition-duration: 3s;
   }
-
-  //transform: translateY(0);
 }
 
 .info {
