@@ -1,0 +1,46 @@
+.blog-title {
+  &__pre-title {
+    padding-top: 128px;
+  }
+
+  &__title {
+    padding-bottom: 64px;
+  }
+}
+
+.blog-calendar {
+  width: 23.6%;
+  height: 351px;
+  border-bottom: 16px solid $light-orang;
+}
+
+.blog-calendar:hover {
+  border-bottom: 16px solid $primary;
+  transition-duration: 3s;
+}
+
+.blob-container {
+  margin-left: 32px;
+
+  &__pre-title {
+    padding-top: 48px;
+  }
+
+  &__title {
+    width: 72%;
+  }
+
+  &__text {
+    width: 79%;
+  }
+}
+
+.blog__text {
+  padding-bottom: 0px;
+}
+
+.blog-boxs {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 128px;
+}
