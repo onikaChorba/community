@@ -1,0 +1,79 @@
+.serve {
+  background: url('/src/assets/images/front-page/serve/background-img.png') no-repeat;
+  background-size: cover;
+  height: 736px;
+  position: relative;
+  display: block;
+}
+
+.serve::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  background: transparent;
+  background-image: linear-gradient(109.61deg, #CD5423 -53.83%, #FFD0A0 62.61%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  mix-blend-mode: soft-light;
+  opacity: 0.8;
+}
+
+.serve-container {
+  padding-top: 128px;
+}
+
+.serve-form {
+  background: $white;
+  width: 60%;
+  height: 464px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 1000;
+  position: relative;
+  border-bottom: 16px solid $white;
+}
+
+.serve-form:hover {
+  border-bottom: 16px solid $primary;
+  transition-duration: 3s;
+}
+
+.box-content {
+  margin-left: 48px;
+  color: $black;
+
+
+  &__title {
+    max-width: 52%;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    width: 40%;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 78%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__button {
+    width: 162px;
+    height: 64px;
+  }
+}
+
+.box-form {
+  &__quotes {
+    position: absolute;
+    right: 48px;
+    top: 170px;
+    bottom: 170px;
+    left: 533px;
+  }
+}
