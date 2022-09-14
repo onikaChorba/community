@@ -7,6 +7,7 @@
   &__nav-bars {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -18,11 +19,12 @@
     display: flex;
     align-items: center;
     height: 100%;
-    margin-left: 7.3%;
     margin-right: 4.4%;
+    width: 20.5%;
   }
 
   &__links {
+    width: 51.6%;
     margin-left: 4.3%;
   }
 
@@ -31,8 +33,7 @@
   }
 
   &__button {
-    margin-right: 7.3%;
-    margin-left: 25%;
+    width: 19.3%;
   }
 }
 
@@ -59,7 +60,6 @@
 
 .link__a:hover {
   color: $primary;
-  -webkit-transition-duration: 2s;
   transition-duration: 2s;
 }
 
@@ -88,4 +88,50 @@
 .button:hover {
   background: $button-active;
   transition-duration: 2s;
+}
+
+
+//media
+@media (max-width:1003px) {
+  .header {
+    height: 120px;
+  }
+
+  .link {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__a {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width:716px) {
+  .header {
+    height: 200px;
+  }
+
+  .nav-bar {
+    display: block;
+    flex-direction: column;
+
+    &__logo {
+      margin: auto;
+      padding-bottom: 16px;
+    }
+
+    &__links {
+      margin-bottom: 16px;
+    }
+
+    &__button {
+      margin: auto;
+      margin-top: 16px;
+    }
+  }
+
+  .link {
+    display: inline;
+  }
 }
