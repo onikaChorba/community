@@ -4,11 +4,13 @@
 }
 
 .container-main {
+  width: 100%;
   margin-left: 110px;
   margin-right: 110px;
 }
 
 .main-title {
+
   &__pre-title {
     font-weight: 700;
     font-size: 16px;
@@ -27,6 +29,7 @@
 
   &__button {
     max-width: 214px;
+    width: 100%;
     max-height: 64px;
   }
 
