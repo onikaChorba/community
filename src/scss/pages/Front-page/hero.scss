@@ -28,8 +28,7 @@
   }
 
   &__button {
-    max-width: 214px;
-    width: 100%;
+    max-width: 16.7%;
     max-height: 64px;
   }
 
@@ -83,9 +82,21 @@
   }
 }
 
+@media (max-width:750px) {
+  .main-title__button {
+    max-width: 26.7%;
+  }
+}
+
 @media (max-width:612px) {
   .hero {
     background: url('/src/assets/images/front-page/hero/hero-bakground.jpg') no-repeat center;
     background-size: cover;
+  }
+}
+
+@media (max-width:540px) {
+  .main-title__button {
+    max-width: 31.7%;
   }
 }
