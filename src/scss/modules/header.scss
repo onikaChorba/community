@@ -69,7 +69,7 @@
 }
 
 .button {
-  max-width: 180px;
+  max-width: 14%;
   width: 100%;
   height: 56px;
   background: $primary;
@@ -102,13 +102,19 @@
     height: 120px;
   }
 
-  .link {
-    display: flex;
-    flex-wrap: wrap;
+  // .link {
+  //   display: flex;
+  //   flex-wrap: wrap;
 
-    &__a {
-      margin-bottom: 5px;
-    }
+  //   &__a {
+  //     margin-bottom: 5px;
+  //   }
+  // }
+}
+
+@media (max-width:750px) {
+  .nav-bar__button {
+    max-width: 24%;
   }
 }
 
@@ -140,6 +146,12 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+}
+
+@media (max-width:540px) {
+  .nav-bar__button {
+    max-width: 29%;
   }
 }
 

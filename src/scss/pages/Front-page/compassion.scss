@@ -1,10 +1,11 @@
 .compassion {
-  padding-top: 128px;
+  padding-top: 10.3%;
   height: 850px;
 
   &__button {
-    max-width: 205px;
-    max-height: 64px;
+    max-width: 16%;
+    height: 64px;
+    width: 100%;
   }
 }
 
@@ -55,5 +56,39 @@
     top: -68px;
     left: 67.1%;
     transform: scale(1);
+  }
+}
+
+@media (max-width:1200px) {
+  .compassion {
+    height: 730px;
+  }
+}
+
+@media (max-width:870px) {
+  .compassion {
+    height: 700px;
+  }
+}
+
+@media (max-width:750px) {
+  .compassion__button {
+    max-width: 24%;
+  }
+}
+
+@media (max-width:540px) {
+  .compassion {
+    height: 730px;
+
+    &__button {
+      max-width: 29%;
+    }
+  }
+}
+
+@media (max-width:452px) {
+  .compassion {
+    height: 650px;
   }
 }
