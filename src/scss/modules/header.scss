@@ -5,10 +5,15 @@
   align-items: center;
 
   &__nav-bars {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.header-container {
+  width: 100%;
 }
 
 .nav-bar {
@@ -132,6 +137,14 @@
   }
 
   .link {
-    display: inline;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width:460px) {
+  .nav-bar__links a {
+    margin-right: 0;
   }
 }
