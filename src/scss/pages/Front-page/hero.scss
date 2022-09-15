@@ -16,12 +16,13 @@
     line-height: 19px;
     color: $white;
     text-transform: uppercase;
-    padding-top: 128px;
+    padding-top: 10.3%;
   }
 
   &__title {
     color: $white;
-    max-width: 39.5%;
+    max-width: 46.3%;
+    width: 100%;
     padding-top: 16px;
     padding-bottom: 32px;
   }
@@ -34,7 +35,7 @@
 
   &__list {
     padding-top: 64px;
-    padding-bottom: 128px;
+    padding-bottom: 10.3%;
     color: $white;
     max-width: 20.5%;
     font-weight: 400;
@@ -44,5 +45,47 @@
     li {
       padding-left: 12px;
     }
+  }
+}
+
+//media
+@media (max-width:1300px) {
+  .main-title {
+
+    &__title {
+      max-width: 60%;
+      padding-bottom: 3%;
+    }
+
+    &__list {
+      max-width: 40%;
+      padding-top: 3%;
+    }
+  }
+}
+
+@media (max-width:913px) {
+  .hero {
+    background-size: cover;
+  }
+
+  .main-title {
+
+    &__title {
+      max-width: 80%;
+      padding-bottom: 3%;
+    }
+
+    &__list {
+      max-width: 60%;
+      padding-top: 3%;
+    }
+  }
+}
+
+@media (max-width:612px) {
+  .hero {
+    background: url('/src/assets/images/front-page/hero/hero-bakground.jpg') no-repeat center;
+    background-size: cover;
   }
 }

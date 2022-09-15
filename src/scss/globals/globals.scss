@@ -68,3 +68,89 @@ a {
     line-height: 24px;
   }
 }
+
+//media
+@media (max-width:1300px) {
+
+  .heading {
+    &__1 {
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 62px;
+      letter-spacing: -1%;
+    }
+
+    &__2 {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 44px;
+      letter-spacing: -1%;
+    }
+
+    &__3 {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: -1%;
+    }
+
+    &__4 {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: -1%;
+    }
+
+    &__5 {
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 18px;
+      letter-spacing: -1%;
+    }
+
+    &__6 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width:450px) {
+  .heading {
+    &__1 {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 52px;
+      letter-spacing: -1%;
+    }
+
+    &__2 {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 34px;
+      letter-spacing: -1%;
+    }
+
+    &__3 {
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 26px;
+      letter-spacing: -1%;
+    }
+
+    &__4 {
+      font-weight: 700;
+      font-size: 8px;
+      line-height: 14px;
+      letter-spacing: -1%;
+    }
+
+    &__5 {
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 18px;
+      letter-spacing: -1%;
+    }
+  }
+}
