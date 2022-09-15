@@ -18,7 +18,7 @@
 }
 
 .relevant-title {
-  padding-top: 128px;
+  padding-top: 10.3%;
   margin: auto;
   display: block;
   flex-direction: column;
@@ -28,14 +28,14 @@
 .relevant-blocks {
   display: flex;
   justify-content: space-between;
-  padding-top: 64px;
+  padding-top: 5%;
 }
 
 .block-info {
   display: block;
   flex-direction: column;
   align-items: center;
-  max-width: 411px;
+  max-width: 32.1%;
   width: 100%;
   max-height: 364px;
   height: 100%;
@@ -77,4 +77,27 @@
 .block-info:hover {
   border-bottom: 16px solid $primary;
   transition-duration: 2s;
+}
+
+//media
+@media (max-width:815px) {
+  .relevant-blocks {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block-info {
+    max-width: 50%;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:550px) {
+  .block-info {
+    max-width: 70%;
+    width: max-content;
+  }
 }

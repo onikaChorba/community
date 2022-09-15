@@ -117,6 +117,10 @@ a {
 }
 
 @media (max-width:450px) {
+  * {
+    font-size: 10px;
+  }
+
   .heading {
     &__1 {
       font-weight: 700;
