@@ -1,6 +1,6 @@
 .blog-title {
   &__pre-title {
-    padding-top: 128px;
+    padding-top: 10.3%;
   }
 
   &__title {
@@ -42,5 +42,14 @@
 .blog-boxs {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 128px;
+  padding-bottom: 10.3%;
+}
+
+//media
+@media (max-width:1200px) {
+  .blog-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
