@@ -22,7 +22,7 @@
 }
 
 .serve-container {
-  padding-top: 128px;
+  padding-top: 10.3%;
 }
 
 .serve-form {
@@ -63,17 +63,43 @@
   }
 
   &__button {
-    width: 162px;
+    max-width: 162px;
+    width: 100%;
     height: 64px;
   }
 }
 
 .box-form {
   &__quotes {
+    max-width: 24.2%;
+    width: 100%;
     position: absolute;
-    right: 48px;
-    top: 170px;
-    bottom: 170px;
-    left: 533px;
+    right: 6.3%;
+    top: 22.1%;
+    bottom: 22.1%;
+    left: 69.4%;
+  }
+}
+
+//media
+@media (max-width:1276px) {
+  .serve {
+    background: url('/src/assets/images/front-page/serve/background-img.png') no-repeat center;
+  }
+}
+
+@media (max-width:860px) {
+  .serve-form {
+    width: 80%;
+  }
+}
+
+@media (max-width:560px) {
+  .serve {
+    height: 600px;
+  }
+
+  .serve-form {
+    width: 90%;
   }
 }
