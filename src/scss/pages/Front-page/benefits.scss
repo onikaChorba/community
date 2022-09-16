@@ -4,7 +4,7 @@
 }
 
 .benefits-title {
-  padding-top: 128px;
+  padding-top: 10.3%;
 
   &__title {
     padding-top: 20px;
@@ -64,5 +64,33 @@
     color: $white;
     margin-bottom: 32px;
     margin-top: 16px;
+  }
+}
+
+//media 
+@media (max-width:1440px) {
+  .benefits {
+    height: 1200px;
+  }
+
+  .block-articles {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .article {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width:706px) {
+  .benefits {
+    height: 1950px;
+  }
+}
+
+@media (max-width:442px) {
+  .article__info {
+    transform: translateY(110%);
   }
 }
