@@ -1,7 +1,7 @@
 import $ from "jquery";
 document.addEventListener('DOMContentLoaded', function () {
-  setInterval(() => animateImgCircle(), 5000),
-    headerScroll()
+  //setInterval(() => animateImgCircle(), 5000),
+  headerScroll()
 })
 
 

@@ -1,0 +1,59 @@
+.welcome {
+  &__title {
+    padding-top: 10.3%;
+  }
+}
+
+.img-welcome {
+  position: relative;
+  height: 370px;
+}
+
+.welcome-img {
+  &__1 {
+    position: absolute;
+    top: 14px;
+    left: 10%;
+    transform: scale(1);
+  }
+
+  &__2 {
+    position: absolute;
+    top: 0px;
+  }
+
+  &__3 {
+    position: absolute;
+    top: 14px;
+    right: 10%;
+    transform: scale(1);
+  }
+}
+
+.welcome-article {
+  padding-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20.5%;
+  margin-right: 20.5%;
+}
+
+.article-box {
+  width: 47%;
+
+  &__pre-title {
+    padding-bottom: 16px;
+    opacity: 78%;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    padding-bottom: 16px;
+
+  }
+
+  &__text {
+    opacity: 78%;
+
+  }
+}
