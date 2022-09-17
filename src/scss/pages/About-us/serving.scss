@@ -1,0 +1,27 @@
+.header-about {
+  position: relative
+}
+
+.serving {
+  // margin-top: 80px;
+  background: url('/src/assets/images/about-us/serving/backgroutimg.png') no-repeat;
+  background-size: cover;
+  height: 432px;
+}
+
+.serving-title {
+  text-align: left;
+  align-items: center;
+  padding-top: 7%;
+
+  &__pre-title {
+    margin: 0;
+    text-align: left;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: left;
+    max-width: 41.7%;
+  }
+}
