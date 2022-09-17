@@ -1,0 +1,30 @@
+.welcome {
+  &__title {
+    padding-top: 10.3%;
+  }
+}
+
+.img-welcome {
+  position: relative;
+}
+
+.welcome-img {
+  &__1 {
+    position: absolute;
+    top: 14px;
+    left: 10%;
+    transform: scale(1);
+  }
+
+  &__2 {
+    position: absolute;
+    top: 0px;
+  }
+
+  &__3 {
+    position: absolute;
+    top: 14px;
+    right: 10%;
+    transform: scale(1);
+  }
+}
