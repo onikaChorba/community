@@ -1,5 +1,7 @@
+import $ from "jquery";
 document.addEventListener('DOMContentLoaded', function () {
-  // setInterval(() => animateImgCircle(), 5000)
+  setInterval(() => animateImgCircle(), 5000),
+    headerScroll()
 })
 
 
@@ -42,4 +44,22 @@ function animateImgCircle() {
       currentElement.style.transform = zeroTransform;
     }
   }
+}
+
+
+//header
+function headerScroll() {
+  var header = $('.header'),
+    scrollPrev = 0;
+
+  $(window).scroll(function () {
+    var scrolled = $(window).scrollTop();
+
+    if (scrolled > 100 && scrolled > scrollPrev) {
+      header.addClass('out');
+    } else {
+      header.removeClass('out');
+    }
+    scrollPrev = scrolled;
+  });
 }

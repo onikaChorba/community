@@ -3,6 +3,11 @@
   height: 80px;
   display: flex;
   align-items: center;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  transition: all .3s ease;
 
   &__nav-bars {
     width: 100%;
@@ -11,6 +16,11 @@
     justify-content: space-between;
   }
 }
+
+.out {
+  transform: translateY(-100%);
+}
+
 
 .header-container {
   width: 100%;
