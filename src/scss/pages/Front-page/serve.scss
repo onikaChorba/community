@@ -63,9 +63,7 @@
   }
 
   &__button {
-    max-width: 162px;
-    width: 100%;
-    height: 64px;
+    @include object-size(100%, 162px, 64px);
   }
 }
 
@@ -81,25 +79,25 @@
   }
 }
 
-// //media
-// @media (max-width:1276px) {
-//   .serve {
-//     background: url('/src/assets/images/front-page/serve/background-img.png') no-repeat center;
-//   }
-// }
+//media
+@media (max-width:1276px) {
+  .serve {
+    background: url('/src/assets/images/front-page/serve/background-img.png') no-repeat center;
+  }
+}
 
-// @media (max-width:860px) {
-//   .serve-form {
-//     width: 80%;
-//   }
-// }
+@media (max-width:860px) {
+  .serve-form {
+    width: 80%;
+  }
+}
 
-// @media (max-width:560px) {
-//   .serve {
-//     height: 600px;
-//   }
+@media (max-width:560px) {
+  .serve {
+    height: 600px;
+  }
 
-//   .serve-form {
-//     width: 90%;
-//   }
-// }
+  .serve-form {
+    width: 90%;
+  }
+}

@@ -29,9 +29,7 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  @include font-size (400, 12px, 14px);
 
   &__logo {
     width: 140px;
@@ -46,9 +44,7 @@
 
 .contact-link {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  @include font-size(400, 12px, 14px);
   width: 148px;
   color: $white;
 }
@@ -81,9 +77,7 @@
 .footer-form {
   &__title {
     color: $white;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 44px;
+    @include font-size (700, 32px, 44px);
     width: 85.5%;
     padding-bottom: 32px;
   }
