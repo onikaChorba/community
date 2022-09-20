@@ -101,3 +101,11 @@
     width: max-content;
   }
 }
+
+@media (max-width:450px) {
+  .heading__2 {
+    font-size: 18px;
+    line-height: 34px;
+    padding-top: 1%;
+  }
+}

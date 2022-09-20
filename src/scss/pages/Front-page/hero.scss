@@ -1,4 +1,5 @@
 .hero {
+  padding-top: 80px;
   background: url('/src/assets/images/front-page/hero/hero-bakground.jpg') no-repeat;
   background-size: cover;
 }
@@ -87,6 +88,12 @@
 @media (max-width:750px) {
   .main-title__button {
     max-width: 26.7%;
+  }
+}
+
+@media (max-width:708px) {
+  .hero {
+    padding-top: 200px;
   }
 }
 
