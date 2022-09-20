@@ -32,3 +32,25 @@
 .clause-img {
   width: 48.8%;
 }
+
+//media
+@media (max-width:650px) {
+  .clause__title {
+    padding-bottom: 3%;
+  }
+
+  .clause-boxs {
+    padding-bottom: 10%;
+  }
+
+  .clause-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .clause-info__text {
+    line-height: 16px;
+  }
+}
+
+@media (max-width:600px) {}
