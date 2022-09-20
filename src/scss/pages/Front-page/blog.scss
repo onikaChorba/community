@@ -61,9 +61,7 @@
 
 @media (max-width:705px) {
   .blog-boxs {
-    display: block;
-    flex-direction: column;
-    justify-content: center;
+    @include position(block, column, center, center);
   }
 
   .blog-calendar {

@@ -3,9 +3,7 @@
   height: 850px;
 
   &__button {
-    max-width: 16%;
-    height: 64px;
-    width: 100%;
+    @include object-size(16%, 100%, 64px);
   }
 }
 
@@ -59,6 +57,7 @@
   }
 }
 
+//media
 @media (max-width:1200px) {
   .compassion {
     height: 730px;
@@ -73,29 +72,6 @@
 
 @media (max-width:750px) {
   .compassion__button {
-    max-width: 24%;
-  }
-}
-
-@media (max-width:540px) {
-  .compassion {
-    height: 730px;
-
-    &__button {
-      max-width: 29%;
-    }
-  }
-
-  .heading {
-    &__2 {
-      font-size: 18px;
-      line-height: 34px;
-    }
-  }
-}
-
-@media (max-width:452px) {
-  .compassion {
-    height: 650px;
+    width: 24%;
   }
 }

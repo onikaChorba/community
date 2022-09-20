@@ -16,9 +16,7 @@
 
 
 .link__text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
+  @include font-size (400, 14px, 16px);
   color: #161722;
   font-family: 'Roboto', sans-serif;
 }

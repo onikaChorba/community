@@ -1,0 +1,21 @@
+//font-size
+@mixin font-size ($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin object-size ($width,
+  $max-width,
+  $height) {
+  width: $width;
+  max-width: $max-width;
+  height: $height;
+}
+
+@mixin position ($display, $flex-direction, $justify-content, $align-items) {
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}

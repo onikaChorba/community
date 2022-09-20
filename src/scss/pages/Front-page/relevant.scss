@@ -3,9 +3,7 @@
   text-align: center;
 
   &__pre-title {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    @include font-size(400, 16px, 19px);
     text-transform: uppercase;
   }
 
@@ -32,13 +30,8 @@
 }
 
 .block-info {
-  display: block;
-  flex-direction: column;
-  align-items: center;
-  max-width: 32.1%;
-  width: 100%;
-  max-height: 364px;
-  height: 100%;
+  @include position(block, column, center, center);
+  @include object-size(100%, 32.1%, 100%);
   background: $light-orang;
   border-bottom: 16px solid $light-orang;
 
@@ -82,10 +75,7 @@
 //media
 @media (max-width:815px) {
   .relevant-blocks {
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include position(block, column, center, center);
   }
 
   .block-info {
@@ -99,13 +89,5 @@
   .block-info {
     max-width: 70%;
     width: max-content;
-  }
-}
-
-@media (max-width:450px) {
-  .heading__2 {
-    font-size: 18px;
-    line-height: 34px;
-    padding-top: 1%;
   }
 }
