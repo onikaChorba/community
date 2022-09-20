@@ -1,0 +1,61 @@
+.sermon {
+  background: url('/src/assets/images/sermons/sermons/background-img.png') no-repeat;
+  background-size: cover;
+  height: 432px;
+  padding-top: 80px;
+}
+
+.sermon-title {
+  padding-top: 13%;
+
+  &__pre-title {
+    margin: 0;
+    text-align: left;
+    color: #232536;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: left;
+    max-width: 61.7%;
+    color: #232536;
+  }
+}
+
+
+@media (max-width:1111px) {
+  .sermon-title {
+    &__title {
+      max-width: 62%;
+    }
+  }
+}
+
+@media (max-width:913px) {
+  .sermon {
+    background-size: cover;
+  }
+}
+
+@media (max-width:708px) {
+  .sermon {
+    padding-top: 200px;
+  }
+}
+
+@media (max-width:656px) {
+  .header {
+    position: absolute;
+  }
+}
+
+@media (max-width:500px) {
+  .sermon {
+    background: url('/src/assets/images/sermons/sermons/background-img.png') no-repeat;
+    height: 250px;
+  }
+
+  .sermon-title {
+    padding-top: 20%;
+  }
+}
