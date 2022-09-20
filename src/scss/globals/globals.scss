@@ -70,49 +70,38 @@ a {
   }
 }
 
+//font-size
+@mixin font-size ($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
 //media
 @media (max-width:1300px) {
-
   .heading {
     &__1 {
-      font-weight: 700;
-      font-size: 44px;
-      line-height: 62px;
-      letter-spacing: -1%;
+      @include font-size(700, 44px, 62px);
     }
 
     &__2 {
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 44px;
-      letter-spacing: -1%;
+      @include font-size(700, 28px, 44px);
     }
 
     &__3 {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 36px;
-      letter-spacing: -1%;
+      @include font-size(700, 20px, 36px);
     }
 
     &__4 {
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 24px;
-      letter-spacing: -1%;
+      @include font-size(700, 12px, 24px);
     }
 
-    // &__5 {
-    //   font-weight: 700;
-    //   font-size: 10px;
-    //   line-height: 18px;
-    //   letter-spacing: -1%;
-    // }
+    &__5 {
+      @include font-size(700, 10px, 18px)
+    }
 
     &__6 {
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
+      @include font-size(700, 16px, 24px)
     }
   }
 
@@ -128,40 +117,29 @@ a {
 
   .heading {
     &__1 {
-      font-weight: 700;
-      font-size: 34px;
-      line-height: 52px;
+      @include font-size(700, 34px, 52px);
       letter-spacing: -1%;
     }
 
     &__2 {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 34px;
+      @include font-size(700, 18px, 34px);
       letter-spacing: -1%;
     }
 
     &__3 {
-      font-weight: 700;
-      font-size: 10px;
-      line-height: 26px;
+      @include font-size(700, 10px, 26px);
       letter-spacing: -1%;
     }
 
     &__4 {
-      font-weight: 700;
-      font-size: 8px;
-      line-height: 14px;
+      @include font-size(700, 8px, 14px);
       letter-spacing: -1%;
     }
 
-    // &__5 {
-    //   font-weight: 700;
-    //   font-size: 10px;
-    //   line-height: 18px;
-    //   letter-spacing: -1%;
-    // }
-
+    &__5 {
+      @include font-size(700, 10px, 18px);
+      letter-spacing: -1%;
+    }
   }
 
   .button__text {

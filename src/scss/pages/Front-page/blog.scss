@@ -45,38 +45,38 @@
   padding-bottom: 10.3%;
 }
 
-//media
-@media (max-width:1200px) {
-  .blog-boxs {
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-around;
-  }
+// //media
+// @media (max-width:1200px) {
+//   .blog-boxs {
+//     flex-wrap: wrap;
+//     align-items: stretch;
+//     justify-content: space-around;
+//   }
 
-  .blog-calendar {
-    width: 40%;
-    margin-bottom: 20px;
-  }
-}
+//   .blog-calendar {
+//     width: 40%;
+//     margin-bottom: 20px;
+//   }
+// }
 
-@media (max-width:705px) {
-  .blog-boxs {
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-  }
+// @media (max-width:705px) {
+//   .blog-boxs {
+//     display: block;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
 
-  .blog-calendar {
-    width: 60%;
-    margin-bottom: 40px;
-    margin: 20px auto;
-  }
-}
+//   .blog-calendar {
+//     width: 60%;
+//     margin-bottom: 40px;
+//     margin: 20px auto;
+//   }
+// }
 
-@media (max-width:505px) {
-  .blog-calendar {
-    width: 80%;
-    margin-bottom: 40px;
-    margin: 20px auto;
-  }
-}
+// @media (max-width:505px) {
+//   .blog-calendar {
+//     width: 80%;
+//     margin-bottom: 40px;
+//     margin: 20px auto;
+//   }
+// }

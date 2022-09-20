@@ -67,30 +67,30 @@
   }
 }
 
-//media 
-@media (max-width:1440px) {
-  .benefits {
-    height: 1200px;
-  }
+// //media 
+// @media (max-width:1440px) {
+//   .benefits {
+//     height: 1200px;
+//   }
 
-  .block-articles {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+//   .block-articles {
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//   }
 
-  .article {
-    margin-bottom: 20px;
-  }
-}
+//   .article {
+//     margin-bottom: 20px;
+//   }
+// }
 
-@media (max-width:706px) {
-  .benefits {
-    height: 1950px;
-  }
-}
+// @media (max-width:706px) {
+//   .benefits {
+//     height: 1950px;
+//   }
+// }
 
-@media (max-width:442px) {
-  .article__info {
-    transform: translateY(110%);
-  }
-}
+// @media (max-width:442px) {
+//   .article__info {
+//     transform: translateY(110%);
+//   }
+// }
