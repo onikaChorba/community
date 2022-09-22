@@ -1,0 +1,38 @@
+.block-posts {
+  background: #E5E5E5;
+}
+
+.block-posts-title {
+  padding-bottom: 6%;
+}
+
+.block-posts {
+  &__blocks {
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    background: $white;
+    margin-bottom: 24px;
+    border-bottom: 16px solid $white;
+    margin-right: 15px;
+  }
+}
+
+//media
+@media (max-width:1300px) {
+  .block-posts {
+    &__blocks {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width:700px) {
+  .block-posts {
+    &__block {
+      margin: auto;
+      margin-bottom: 24px;
+    }
+  }
+}

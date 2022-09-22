@@ -48,7 +48,7 @@
     }
 
     &__button {
-      max-width: 24%;
+      min-width: 24%;
     }
   }
 }
@@ -67,9 +67,51 @@
     &__title {
       @include font-size(700, 20px, 34px);
     }
+  }
+}
 
-    &__button {
-      width: 35%;
+@media (max-width:1100px) {
+  .post-box {
+    @include position (block, column, center, center);
+    height: fit-content;
+
+    &__img {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin: auto;
+      max-width: 60%;
+    }
+  }
+
+  .post-info {
+    margin: auto;
+    min-width: 60%;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width:750px) {
+  .post-box {
+    &__img {
+      max-width: 80%;
+    }
+  }
+
+  .post-info {
+    min-width: 80%;
+  }
+}
+
+@media (max-width:710px) {
+  .our-blog {
+    padding-top: 200px;
+  }
+}
+
+@media (max-width:556px) {
+  .post-info {
+    &__botton {
+      min-width: 35%;
     }
   }
 }
