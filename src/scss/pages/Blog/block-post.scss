@@ -1,0 +1,20 @@
+.block-posts {
+  background: #E5E5E5;
+}
+
+.block-posts-title {
+  padding-bottom: 6%;
+}
+
+.block-posts {
+  &__blocks {
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    background: $white;
+    margin-bottom: 24px;
+    border-bottom: 16px solid $white;
+    margin-right: 18px;
+  }
+}
