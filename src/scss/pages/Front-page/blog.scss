@@ -48,17 +48,22 @@
 
 .blog-boxs {
   display: flex;
-  // justify-content: space-between;
   padding-bottom: 10.3%;
+
+  // @include screen-md {
+  //   flex-wrap: wrap;
+  //   align-items: stretch;
+  //   justify-content: space-around;
+  // }
 }
 
 //media
 @media (max-width:1200px) {
-  .blog-boxs {
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-around;
-  }
+  // .blog-boxs {
+  //   flex-wrap: wrap;
+  //   align-items: stretch;
+  //   justify-content: space-around;
+  // }
 
   .blog-calendar {
     width: 40%;
