@@ -21,19 +21,31 @@
   display: block;
   flex-direction: column;
   align-items: center;
+
 }
 
 .relevant-blocks {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 5%;
+
+  @include screen-lp {
+    flex-wrap: nowrap;
+  }
 }
 
 .block-info {
   @include position(block, column, center, center);
-  @include object-size(100%, 32.1%, 100%);
   background: $light-orang;
   border-bottom: 16px solid $light-orang;
+  max-width: 40%;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  @include screen-lp {
+    @include object-size(100%, 32.1%, 100%);
+  }
 
   &__icon {
     width: 48px;
@@ -54,40 +66,25 @@
   }
 
   &__title {
+    text-transform: uppercase;
     margin-left: 19.5%;
     margin-bottom: 8px;
   }
 
   &__text {
-    font-weight: 400;
-    line-height: 24px;
+    line-height: 18px;
     margin-bottom: 21%;
     margin-left: 19.5%;
     max-width: 62%;
+
+    @include screen-md {
+      font-weight: 400;
+      line-height: 24px;
+    }
   }
 }
 
 .block-info:hover {
   border-bottom: 16px solid $primary;
   transition-duration: 2s;
-}
-
-//media
-@media (max-width:815px) {
-  .relevant-blocks {
-    @include position(block, column, center, center);
-  }
-
-  .block-info {
-    max-width: 50%;
-    width: max-content;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width:550px) {
-  .block-info {
-    max-width: 70%;
-    width: max-content;
-  }
 }

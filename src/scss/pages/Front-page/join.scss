@@ -4,26 +4,50 @@
 
 .join-part {
   display: flex;
+  flex-wrap: wrap;
+
+  @include screen-md {
+    flex-wrap: nowrap;
+  }
 
   &__calendar {
     position: relative;
-    max-width: 34%;
-    width: 100%;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+
+    @include screen-tb {
+      width: 60%;
+    }
+
+    @include screen-lp {
+      width: 50%;
+    }
+
+    @include screen-md {
+      width: 34%;
+      height: 512px;
+      padding-top: 19px;
+    }
   }
 
   &__img {
-    max-width: 66%;
-    width: 100%;
+    width: 80%;
+    margin: 20px auto;
 
-    img {
-      width: inherit;
+    @include screen-md {
+      width: 66%;
     }
   }
 
   &__link {
-    padding-top: 48px;
+
     text-align: right;
     padding-bottom: 10.3%;
+
+    @include screen-lp {
+      padding-top: 48px;
+    }
 
     &__link-text {
       font-family: "Roboto Condensed", sans-serif;
@@ -40,7 +64,7 @@
 
 .join-title__title {
   padding-top: 16px;
-  padding-bottom: 64px;
+  padding-bottom: 7%;
 }
 
 .calendar-box {
@@ -57,7 +81,8 @@
   @include position(flex, column, center, center);
 
   &__pre-title {
-    @include font-size(700, 12px, 14px);
+    @include font-size (700, 10px, 12px);
+    margin-top: 10%;
     letter-spacing: 8%;
     color: transparent;
     background-clip: text;
@@ -66,20 +91,38 @@
     text-transform: uppercase;
     width: 48%;
     margin-bottom: 3%;
+
+    @include screen-sm {
+      @include font-size(700, 12px, 14px);
+    }
   }
 
   &__title {
     width: 59%;
     margin-bottom: 3%;
+    @include font-size(700, 10px, 18px);
+
+    @include screen-sm {
+      @include font-size(700, 20px, 24px);
+
+    }
+
+    @include screen-md {
+      @include font-size(700, 24px, 28px);
+    }
   }
 
   &__text {
     color: $black;
-    font-weight: 400;
-    line-height: 24px;
+    @include font-size(400, 10px, 12px);
     opacity: 0.78;
     width: 80%;
-    margin-bottom: 6%;
+    margin-bottom: 3%;
+
+    @include screen-sm {
+      @include font-size(400, 16px, 24px);
+      margin-bottom: 6%;
+    }
   }
 
   &__button {
@@ -87,6 +130,7 @@
     max-width: 44%;
     width: 100%;
     max-height: 64px;
+    margin-bottom: 6%;
   }
 
   &__button-text {
@@ -108,12 +152,21 @@
   padding-bottom: 6%;
 
   &__icon {
-    width: 20px;
-    height: 20px;
+    width: 10px;
     padding-right: 16px;
 
+    @include screen-sm {
+      width: 20px;
+      height: 20px;
+    }
+
     img {
-      padding-bottom: 16px;
+      padding-bottom: 8px;
+
+      @include screen-sm {
+        padding-bottom: 16px;
+      }
+
     }
   }
 }
@@ -122,9 +175,12 @@
   &__text {
     color: $black;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 12px;
     padding-bottom: 3%;
-    width: 80%;
+
+    @include screen-sm {
+      line-height: 24px;
+    }
   }
 }
 
@@ -145,41 +201,5 @@
     line-height: 19px;
     text-transform: uppercase;
     text-align: right;
-  }
-}
-
-//media
-@media (max-width:1300px) {
-  .join-part {
-    display: block;
-    flex-direction: column;
-
-    &__calendar {
-      @include object-size(100%, 44%, 512px);
-      margin: auto;
-      margin-bottom: 5%;
-    }
-
-    &__img {
-      max-width: 100%;
-      width: 100%;
-    }
-  }
-}
-
-@media (max-width:930px) {
-  .join-part {
-
-    &__calendar {
-      @include object-size(100%, 64%, 512px);
-    }
-  }
-}
-
-@media (max-width:600px) {
-  .join-part {
-    &__calendar {
-      @include object-size(100%, 80%, 512px);
-    }
   }
 }

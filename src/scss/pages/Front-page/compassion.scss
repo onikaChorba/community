@@ -1,6 +1,14 @@
 .compassion {
   padding-top: 10.3%;
-  height: 850px;
+  height: 550px;
+
+  @include screen-sm {
+    height: 700px;
+  }
+
+  @include screen-tb {
+    height: 820px;
+  }
 
   &__button {
     @include object-size(16%, 100%, 64px);
@@ -8,6 +16,22 @@
 }
 
 .second-title {
+  &__title {
+    @include font-size(700, 18px, 24px);
+
+    @include screen-sm {
+      @include font-size(700, 18px, 34px);
+    }
+
+    @include screen-lp {
+      @include font-size(700, 28px, 44px);
+    }
+
+    @include screen-tb {
+      @include font-size(700, 48px, 64px);
+    }
+  }
+
   &__text {
     max-width: 64.5%;
     margin: 0 auto;
@@ -20,6 +44,13 @@
 
   &__button {
     margin: 0 auto;
+    width: 30%;
+    height: 40px;
+
+    @include screen-tb {
+      width: 16%;
+      height: 64px;
+    }
   }
 }
 
@@ -54,24 +85,5 @@
     top: -68px;
     left: 67.1%;
     transform: scale(1);
-  }
-}
-
-//media
-@media (max-width:1200px) {
-  .compassion {
-    height: 730px;
-  }
-}
-
-@media (max-width:870px) {
-  .compassion {
-    height: 700px;
-  }
-}
-
-@media (max-width:750px) {
-  .compassion__button {
-    width: 24%;
   }
 }

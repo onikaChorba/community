@@ -9,10 +9,20 @@
 }
 
 .blog-calendar {
-  width: 23.6%;
-  height: 351px;
+  width: 80%;
+  height: fit-content;
   border-bottom: 16px solid $light-orang;
   margin-right: 24px;
+  margin: 2% auto;
+
+  @include screen-sm {
+    width: 45%;
+  }
+
+  @include screen-tb {
+    width: 23.6%;
+    height: 351px;
+  }
 }
 
 .blog-calendar:hover {
@@ -24,7 +34,12 @@
   margin-left: 32px;
 
   &__pre-title {
-    padding-top: 48px;
+    padding-top: 20px;
+
+    @include screen-tb {
+      padding-top: 48px;
+    }
+
   }
 
   &__title {
@@ -48,45 +63,6 @@
 
 .blog-boxs {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 10.3%;
-
-  // @include screen-md {
-  //   flex-wrap: wrap;
-  //   align-items: stretch;
-  //   justify-content: space-around;
-  // }
-}
-
-//media
-@media (max-width:1200px) {
-  // .blog-boxs {
-  //   flex-wrap: wrap;
-  //   align-items: stretch;
-  //   justify-content: space-around;
-  // }
-
-  .blog-calendar {
-    width: 40%;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width:705px) {
-  .blog-boxs {
-    @include position(block, column, center, center);
-  }
-
-  .blog-calendar {
-    width: 60%;
-    margin-bottom: 40px;
-    margin: 20px auto;
-  }
-}
-
-@media (max-width:505px) {
-  .blog-calendar {
-    width: 80%;
-    margin-bottom: 40px;
-    margin: 20px auto;
-  }
 }
