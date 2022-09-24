@@ -1,6 +1,14 @@
 .event-calendar {
-  height: 454px;
   position: relative;
+
+  @include screen-tb {
+    width: 40%;
+  }
+
+  @include screen-lp {
+    height: 454px;
+    width: 23.5%;
+  }
 }
 
 .event__text {
