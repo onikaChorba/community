@@ -62,7 +62,11 @@
   }
 
   &__button {
-    width: 19.3%;
+    width: 26%;
+
+    @include screen-lp {
+      width: 19.3%;
+    }
   }
 }
 
@@ -128,55 +132,3 @@
   background: $button-active;
   transition-duration: 2s;
 }
-
-
-//media
-
-// @media (max-width:750px) {
-//   .nav-bar__button {
-//     max-width: 24%;
-//   }
-// }
-
-// @media (max-width:716px) {
-//   .header {
-//     height: 200px;
-//   }
-
-//   .nav-bar {
-//     display: block;
-//     flex-direction: column;
-
-//     &__logo {
-//       margin: auto;
-//       padding-bottom: 16px;
-//     }
-
-//     &__links {
-//       margin-bottom: 16px;
-//     }
-
-//     &__button {
-//       margin: auto;
-//       margin-top: 16px;
-//     }
-//   }
-
-//   .link {
-//     display: flex;
-//     justify-content: space-between;
-//     width: 100%;
-//   }
-// }
-
-// @media (max-width:540px) {
-//   .nav-bar__button {
-//     max-width: 29%;
-//   }
-// }
-
-// @media (max-width:460px) {
-//   .nav-bar__links a {
-//     margin-right: 0;
-//   }
-// }

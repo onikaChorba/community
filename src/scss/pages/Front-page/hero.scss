@@ -1,6 +1,6 @@
 .hero {
   padding-top: 80px;
-  background: url('/src/assets/images/front-page/hero/hero-bakground.jpg') no-repeat;
+  background: url('/src/assets/images/front-page/hero/hero-bakground.jpg') no-repeat center;
   background-size: cover;
 }
 
@@ -13,99 +13,60 @@
   color: #232536;
 
   &__pre-title {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
+    @include font-size (700, 10px, 12px);
     color: $white;
     text-transform: uppercase;
     padding-top: 10.3%;
+
+    @include screen-lp {
+      @include font-size (700, 16px, 19px);
+    }
   }
 
   &__title {
     color: $white;
-    max-width: 46.3%;
+    max-width: 80%;
     width: 100%;
     padding-top: 16px;
     padding-bottom: 32px;
+    @include font-size(700, 18px, 24px);
+    letter-spacing: -1%;
+
+    @include screen-sm {
+      @include font-size(700, 18px, 34px);
+    }
+
+    @include screen-lp {
+      @include font-size(700, 64px, 82px);
+      max-width: 46.3%;
+    }
   }
 
   &__button {
-    max-width: 16.7%;
-    max-height: 64px;
+    max-width: 30%;
+
+    @include screen-lp {
+      max-width: 16.7%;
+      max-height: 64px;
+    }
   }
 
   &__list {
-    padding-top: 64px;
+    padding-top: 8%;
     padding-bottom: 10.3%;
     color: $white;
-    max-width: 20.5%;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    max-width: 50%;
+    @include font-size (400, 10px, 14px);
+
+    @include screen-lp {
+      @include font-size (400, 16px, 24px);
+      max-width: 20.5%;
+      padding-top: 64px;
+    }
 
     li {
       padding-left: 12px;
       list-style-image: url("/src/assets/images/front-page/hero/Line.png");
     }
-  }
-}
-
-//media
-@media (max-width:1300px) {
-  .main-title {
-
-    &__title {
-      max-width: 60%;
-      padding-bottom: 3%;
-    }
-
-    &__list {
-      max-width: 40%;
-      padding-top: 3%;
-    }
-  }
-}
-
-@media (max-width:913px) {
-  .hero {
-    background-size: cover;
-  }
-
-  .main-title {
-
-    &__title {
-      max-width: 80%;
-      padding-bottom: 3%;
-    }
-
-    &__list {
-      max-width: 60%;
-      padding-top: 3%;
-    }
-  }
-}
-
-@media (max-width:750px) {
-  .main-title__button {
-    max-width: 26.7%;
-  }
-}
-
-@media (max-width:708px) {
-  .hero {
-    padding-top: 200px;
-  }
-}
-
-@media (max-width:612px) {
-  .hero {
-    background: url('/src/assets/images/front-page/hero/hero-bakground.jpg') no-repeat center;
-    background-size: cover;
-  }
-}
-
-@media (max-width:540px) {
-  .main-title__button {
-    max-width: 31.7%;
   }
 }
