@@ -1,12 +1,13 @@
 .user-blocks {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 5%;
   padding-bottom: 10.3%;
 }
 
 .user-block {
-  @include object-size(100%, 302px, 366px);
+  margin: 5% auto;
+  @include object-size(80%, 302px, 366px);
   background: $grey;
   @include position (flex, column, center, center);
 
@@ -36,16 +37,4 @@
 
 .block-icon {
   padding-right: 20px;
-}
-
-//media
-@media (max-width:1400px) {
-  .user-blocks {
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .user-block {
-    margin-bottom: 5%;
-  }
 }

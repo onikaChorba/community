@@ -6,7 +6,15 @@
 
 .img-welcome {
   position: relative;
-  height: 370px;
+  height: 60px;
+
+  @include screen-sm {
+    height: 150px;
+  }
+
+  @include screen-tb {
+    height: 370px;
+  }
 }
 
 .welcome-img {
@@ -31,15 +39,31 @@
 }
 
 .welcome-article {
-  padding-top: 64px;
+  padding-top: 6%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-left: 20.5%;
   margin-right: 20.5%;
+
+  @include screen-sm {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 10.5%;
+    margin-right: 10.5%;
+  }
+
+  @include screen-lp {
+    margin-left: 20.5%;
+    margin-right: 20.5%;
+  }
 }
 
 .article-box {
-  width: 47%;
+  padding-bottom: 10%;
+
+  @include screen-sm {
+    width: 47%;
+  }
 
   &__pre-title {
     padding-bottom: 16px;
@@ -56,67 +80,20 @@
   }
 }
 
-@media (max-width:1000px) {
-  .img-welcome {
-    height: 220px;
-  }
+.welcome-pre-title {
+  @include font-size (400, 10px, 12px);
 
-  .welcome-article {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .article-box {
-    &__pre-title {
-      padding-bottom: 1%;
-    }
-
-    &__title {
-      padding-bottom: 2%;
-    }
+  @include screen-tb {
+    @include font-size (400, 16px, 19px);
   }
 }
 
-@media (max-width:800px) {
-  .img-welcome {
-    height: 140px;
-  }
-}
+.welcome-text {
+  padding-top: 3%;
+  padding-bottom: 3%;
 
-@media (max-width:600px) {
-  .welcome-title {
-    max-width: 100%;
-  }
-}
-
-@media (max-width:573px) {
-  .welcome-article {
-    padding-top: 3%;
-    @include position (flex, column, center, center);
-  }
-
-  .article-box {
-    padding-bottom: 10%;
-  }
-}
-
-@media (max-width:450px) {
-  .second-title {
-    &__pre-title {
-      font-size: 10px;
-      line-height: 12px;
-      font-weight: 300;
-    }
-  }
-
-  .second-title {
-    &__text {
-      padding-top: 3%;
-      padding-bottom: 3%;
-    }
-  }
-
-  .img-circle {
-    padding-bottom: 0;
+  @include screen-tb {
+    padding-top: 32px;
+    padding-bottom: 48px;
   }
 }

@@ -1,12 +1,19 @@
 .serving {
-  background: url('/src/assets/images/about-us/serving/backgroutimg.png') no-repeat;
+  background: url('/src/assets/images/about-us/serving/backgroutimg.png') no-repeat center;
   background-size: cover;
-  height: 432px;
   padding-top: 80px;
+
+  @include screen-tb {
+    height: 432px;
+  }
 }
 
 .serving-title {
-  padding-top: 13%;
+  padding-top: 6%;
+
+  @include screen-tb {
+    padding-top: 13%;
+  }
 
   &__pre-title {
     margin: 0;
@@ -17,43 +24,6 @@
     margin: 0;
     text-align: left;
     max-width: 41.7%;
-  }
-}
-
-
-@media (max-width:1111px) {
-  .serving-title {
-    &__title {
-      max-width: 62%;
-    }
-  }
-}
-
-@media (max-width:913px) {
-  .serving {
-    background-size: cover;
-  }
-}
-
-@media (max-width:708px) {
-  .serving {
-    padding-top: 200px;
-  }
-}
-
-@media (max-width:656px) {
-  .header {
-    position: absolute;
-  }
-}
-
-@media (max-width:500px) {
-  .serving {
-    background: url('/src/assets/images/about-us/serving/backgroutimg.png') no-repeat;
-    height: 250px;
-  }
-
-  .serving-title {
-    padding-top: 20%;
+    padding-bottom: 6%;
   }
 }

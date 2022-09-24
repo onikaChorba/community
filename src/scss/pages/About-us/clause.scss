@@ -1,9 +1,15 @@
 .clause-boxs {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin-left: 10%;
   margin-right: 10%;
-  padding-bottom: 96px;
+  padding-bottom: 10%;
+
+  @include screen-tb {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-bottom: 96px;
+  }
 }
 
 .clause__title {
@@ -12,67 +18,42 @@
 }
 
 .clause-info {
-  width: 48.8%;
+  margin: auto;
+  width: 60%;
   @include position (flex, column, center, left);
+
+  @include screen-tb {
+    width: 48.8%;
+  }
 
   &__title {
     text-transform: uppercase;
-    padding-bottom: 16px;
+    padding-bottom: 2%;
+
+    @include screen-tb {
+      padding-bottom: 16px;
+    }
+
   }
 
   &__text {
-    line-height: 24px;
-    font-weight: 400;
+    @include font-size (400, 10px, 12px);
+
+    @include screen-tb {
+      @include font-size (400, 16px, 24px);
+    }
+
     opacity: 78%;
   }
 }
 
 .clause-img {
-  width: 48.8%;
-}
+  margin: auto;
+  padding-top: 10%;
+  width: 60%;
 
-//media
-@media (max-width:1073px) {
-  .clause-info {
-    &__title {
-      @include font-size(700, 28px, 30px);
-    }
-  }
-
-  .clause-boxs {
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-bottom: 5%;
-  }
-}
-
-@media (max-width:909px) {
-  .clause-info {
-    &__title {
-      padding-bottom: 0;
-    }
-  }
-}
-
-@media (max-width:843px) {
-  .clause-boxs {
-    @include position(block, column, center, center);
-  }
-
-  .clause-info {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-
-    &__title {
-      padding-bottom: 2%;
-    }
-  }
-
-  .clause-img {
-    width: 80%;
-    padding-top: 6%;
-    padding-bottom: 6%;
-    margin: 0 auto;
+  @include screen-tb {
+    width: 48.8%;
+    padding-top: 0;
   }
 }
