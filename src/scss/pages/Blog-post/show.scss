@@ -1,0 +1,37 @@
+.show {
+  padding-top: 80px;
+  background: #E5E5E5;
+
+  &__img {
+    padding-bottom: 6%;
+  }
+}
+
+.show-title {
+  padding-top: 10.3%;
+
+  &__pre-title {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    @include font-size (700, 12px, 14px);
+    letter-spacing: 8%;
+  }
+
+  &__title {
+    width: 44.5%;
+    padding-bottom: 16px;
+  }
+}
+
+.show-info {
+  display: flex;
+  justify-content: center;
+  @include font-size (400, 16px, 24px);
+  padding-bottom: 6%;
+
+  &__text {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
