@@ -3,7 +3,16 @@
 }
 
 .apcoming-calendar {
+  position: relative;
   background: $white;
   height: 454px;
   border-bottom: 16px solid $white;
+}
+
+.number {
+  position: absolute;
+}
+
+.apcoming__title {
+  width: 80%;
 }
