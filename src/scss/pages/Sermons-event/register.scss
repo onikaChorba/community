@@ -6,27 +6,45 @@
 .register-content {
   padding-top: 10.3%;
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 10.3%;
+  justify-content: center;
 
   &__info {
-    width: 49.2%;
-    padding-right: 10%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+
+    @include screen-tb {
+      width: 49.2%;
+      padding-right: 10%;
+      padding-bottom: 0;
+    }
   }
 
   &__form {
-    width: 40.8%;
+    @include screen-tb {
+      width: 40.8%;
+    }
   }
 }
 
 .register-form {
   background: $white;
-  height: 484px;
+  height: auto;
+
   padding-left: 7.7%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: auto;
+
+  @include screen-tb {
+    height: 484px;
+  }
 
   &__title {
+    @include font-size (700, 16px, 20px);
+    padding-top: 32px;
     padding-bottom: 32px;
   }
 
@@ -36,28 +54,56 @@
 }
 
 .register-info {
+
   &__pre-title {
     margin: 0;
-    padding-top: 32px;
-    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 6px;
+
+    @include screen-tb {
+      padding-top: 32px;
+      padding-bottom: 16px;
+    }
   }
 
   &__title {
-    letter-spacing: 0.01em;
-    @include font-size (700, 48px, 64px);
+    @include font-size(700, 18px, 34px);
+    letter-spacing: -1%;
+
+    @include screen-tb {
+      letter-spacing: 0.01em;
+      @include font-size (700, 36px, 40px);
+    }
+
+    @include screen-lp {
+      letter-spacing: 0.01em;
+      @include font-size (700, 48px, 64px);
+    }
   }
 }
 
 .data-block {
   display: flex;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
+
+  @include screen-tb {
+    padding-bottom: 32px;
+  }
+
 
   &__icon {
     padding-right: 14px;
+    width: 15px;
+    height: 15px;
   }
 
   &__text {
-    @include font-size (400, 16px, 24px);
+    @include font-size (400, 10px, 12px);
+
+    @include screen-lp {
+      @include font-size (400, 16px, 24px);
+    }
+
   }
 }
 
@@ -71,22 +117,31 @@
     @include font-size (500, 12px, 16px);
     opacity: 0.6;
     padding-bottom: 12px;
-    padding-top: 32px;
+    padding-top: 12px;
+
+    @include screen-tb {
+      padding-top: 32px;
+    }
+
   }
 
   &__input {
     color: #1D2130;
     @include font-size (500, 16px, 24px);
     border-bottom: 1px solid rgba($color: #232536, $alpha: .2);
-
     padding-bottom: 8px;
     width: 80%;
   }
 
   &__button {
     margin-top: 32px;
-    max-width: 43.5%;
+    max-width: 60%;
     width: 100%;
+    margin-bottom: 32px;
+
+    @include screen-tb {
+      max-width: 43.5%;
+    }
   }
 }
 
@@ -95,15 +150,3 @@ input[value="Register now"] {
   text-transform: uppercase;
   @include font-size (400, 16px, 16px);
 }
-
-// .register-data {
-//   display: flex;
-
-//   &__icon {
-//     padding-right: 14px;
-//   }
-
-//   &__text {
-//     width: 35.3%;
-//   }
-// }
