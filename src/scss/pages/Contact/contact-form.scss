@@ -11,10 +11,21 @@
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 10.3%;
+
+  @include screen-sm {
+    flex-wrap: nowrap;
+  }
 }
 
 .forms {
-  max-width: 48.7%;
+  max-width: 80%;
+  padding-bottom: 30px;
+
+  @include screen-sm {
+    max-width: 48.7%;
+    padding-bottom: 0;
+  }
+
 
   &__contact {
     width: 97%;
@@ -63,9 +74,21 @@
     letter-spacing: -1%;
     max-width: 263px;
     padding-bottom: 32px;
+    @include font-size (700, 15px, 20px);
+
+    @include screen-tb {
+      @include font-size(700, 24px, 28px);
+      ;
+    }
 
     a {
       color: #161722;
+      @include font-size (700, 15px, 20px);
+
+      @include screen-tb {
+        @include font-size(700, 24px, 28px);
+        ;
+      }
     }
   }
 
