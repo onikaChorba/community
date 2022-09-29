@@ -52,9 +52,17 @@
   }
 }
 
+.forms__message:focus {
+  border: 2px solid $primary;
+}
+
 .forms__contact[value] {
   @include font-size (400, 16px, 24px);
   padding-left: 20px;
+}
+
+.forms__contact[value]:focus {
+  border: 2px solid $primary;
 }
 
 .addresses {

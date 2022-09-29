@@ -1,0 +1,10 @@
+/* GLOBAL STYLES */
+@import './globals/globals.scss';
+@import './globals/mixin.scss';
+@import './globals/media.scss';
+/* GLOBAL MODULES */
+@import './modules/header.scss';
+@import './modules/footer.scss';
+
+// /* SERMONS*/
+@import './pages/Sermons/Sermons-main.scss';
