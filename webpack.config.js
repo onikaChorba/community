@@ -14,7 +14,19 @@ module.exports = {
         port: 8080,
     },
     entry: {
-        main: path.resolve(__dirname, './src/index.js'),
+        main: path.resolve(__dirname, './src/front-page.js'),
+    },
+    entry: {
+        main: path.resolve(__dirname, './src/About-us.js'),
+    },
+    entry: {
+        main: path.resolve(__dirname, './src/Sermons-main.js'),
+    },
+    entry: {
+        main: path.resolve(__dirname, './src/Sermons-event.js'),
+    },
+    entry: {
+        main: path.resolve(__dirname, './src/Blog.js'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
