@@ -108,10 +108,16 @@
 
       @include screen-sm {
         max-width: 60%;
+        height: 36px;
       }
 
       @include screen-tb {
         max-width: 35%;
+        height: 56px;
+      }
+
+      @include screen-lp {
+        height: 64px;
       }
     }
   }
