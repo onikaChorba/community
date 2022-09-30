@@ -136,11 +136,17 @@
   &__button {
     margin-top: 32px;
     max-width: 60%;
+    height: 36px;
     width: 100%;
     margin-bottom: 32px;
 
     @include screen-tb {
       max-width: 43.5%;
+      height: 56px;
+    }
+
+    @include screen-lp {
+      height: 64px;
     }
   }
 }

@@ -100,20 +100,25 @@
   color: $primary;
 }
 
+.nav-bar {
+  &__button {
+    height: 36px;
+    max-width: 30%;
+
+    @include screen-tb {
+      max-width: 14%;
+      height: 56px;
+    }
+  }
+}
+
 .button {
-  height: 36px;
-  max-width: 30%;
   background: $primary;
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
-  @include screen-tb {
-    max-width: 14%;
-    height: 56px;
-  }
 
   &__text {
     @include font-size (400, 10px, 14px);

@@ -44,10 +44,15 @@
 
   &__button {
     max-width: 30%;
+    height: 36px;
+
+    @include screen-tb {
+      height: 56px;
+    }
 
     @include screen-lp {
       max-width: 16.7%;
-      max-height: 64px;
+      height: 64px;
     }
   }
 
