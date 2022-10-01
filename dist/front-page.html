@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front-page</title>
+<script defer src="main.bundle.js"></script></head>
+
+<body>
+  <header class="header">
+    <div class="container-main header-container">
+      <div class="header__nav-bars nav-bar">
+        <a href="front-page.html" class="nav-bar__logo logo">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMyIiBoZWlnaHQ9IjI3IiB2aWV3Qm94PSIwIDAgMTMyIDI3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfOTAxXzY3NikiPgo8cGF0aCBkPSJNMTMxLjc2NiAyMC40MTgyVjIzLjY4NDhIMTI5LjAyNkMxMjYuMTAyIDIzLjU5MjkgMTI0LjUzOSAyMi4wMTM5IDEyNC41MzkgMTkuMDQ4MVYxMS41ODc2SDEyMi42MjZWOC43MjIwMkgxMjQuNTM5VjUuNTEzOTJIMTI4LjU4M1Y4LjY4ODZIMTMxLjY3NFYxMS41NDU4SDEyOC41ODNWMTguNjQ3MUMxMjguNTgzIDE5LjYwNzggMTI4Ljc3NSAyMC4zNzY0IDEzMC4yNTQgMjAuMzc2NEwxMzEuNzY2IDIwLjQxODJaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTA2LjUxMSAxNi4yMzI3VjE2LjAxNTVDMTA2LjQ2NyAxNS4wNTQ2IDEwNi42MTMgMTQuMDk0NSAxMDYuOTQxIDEzLjE5MDNDMTA3LjI2OSAxMi4yODYxIDEwNy43NzMgMTEuNDU1NSAxMDguNDIyIDEwLjc0NjFDMTA5LjA3MiAxMC4wMzY3IDEwOS44NTUgOS40NjI1NCAxMTAuNzI3IDkuMDU2NDRDMTExLjU5OSA4LjY1MDMzIDExMi41NDIgOC40MjAyOSAxMTMuNTAzIDguMzc5NTJDMTEzLjY5NiA4LjM3OTUyIDExMy44OTYgOC4zNzk1MiAxMTQuMDg4IDguMzc5NTJDMTE3LjkwNiA4LjM3OTUyIDEyMS4yNTYgMTAuNjAxOCAxMjEuMjU2IDE1Ljg5ODVWMTcuMDI2NEgxMTAuNjQ2QzExMC43NTUgMTkuNDY1OCAxMTIuMDc1IDIwLjg0NDMgMTE0LjI5NyAyMC44NDQzQzExNi4yMSAyMC44NDQzIDExNy4xMDQgMjAuMDA4OSAxMTcuMzYzIDE4Ljc4OTFIMTIxLjE4MUMxMjAuNzEzIDIxLjk3MjIgMTE4LjE3NCAyMy43NDMzIDExNC4xNTUgMjMuNzQzM0MxMDkuNzQ0IDIzLjcwOTkgMTA2LjUxMSAyMC45MTk1IDEwNi41MTEgMTYuMjMyN1pNMTE3LjI4IDE0LjQ2OTlDMTE3LjEzOCAxMi4yNDc2IDExNi4wMTggMTEuMTc4MyAxMTQuMDcxIDExLjE3ODNDMTEyLjEyNSAxMS4xNzgzIDExMS4wMDUgMTIuMzgxMyAxMTAuNzMgMTQuNDY5OUgxMTcuMjhaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNOTAuMDAyMiAxNi4yMzI3VjE2LjAxNTVDODkuOTU4NSAxNS4wNTU5IDkwLjEwNDIgMTQuMDk3MiA5MC40MzEyIDEzLjE5NEM5MC43NTgxIDEyLjI5MDggOTEuMjU5OSAxMS40NjEgOTEuOTA3NyAxMC43NTE4QzkyLjU1NTYgMTAuMDQyNyA5My4zMzY5IDkuNDY4MTQgOTQuMjA2OSA5LjA2MTA4Qzk1LjA3NjkgOC42NTQwMyA5Ni4wMTg2IDguNDIyNDMgOTYuOTc4MiA4LjM3OTUyQzk3LjE3MDMgOC4zNzk1MiA5Ny4zNzA4IDguMzc5NTIgOTcuNTYzIDguMzc5NTJDMTAxLjM4MSA4LjM3OTUyIDEwNC43MzkgMTAuNjAxOCAxMDQuNzM5IDE1Ljg5ODVWMTcuMDI2NEg5NC4xMzc3Qzk0LjI0NjMgMTkuNDY1OCA5NS41NjYzIDIwLjg0NDMgOTcuNzg4NiAyMC44NDQzQzk5LjcwMTcgMjAuODQ0MyAxMDAuNTk2IDIwLjAwODkgMTAwLjg1NSAxOC43ODkxSDEwNC42NzNDMTA0LjE5NiAyMS45NzIyIDEwMS42NTcgMjMuNzQzMyA5Ny42MzgyIDIzLjc0MzNDOTMuMjM1NCAyMy43MDk5IDkwLjAwMjIgMjAuOTE5NSA5MC4wMDIyIDE2LjIzMjdaTTEwMC43NzEgMTQuNDY5OUMxMDAuNjI5IDEyLjI0NzYgOTkuNTA5NiAxMS4xNzgzIDk3LjU2MyAxMS4xNzgzQzk1LjYxNjQgMTEuMTc4MyA5NC41MzAzIDEyLjQxNDcgOTQuMjIxMiAxNC40NjE1TDEwMC43NzEgMTQuNDY5OVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik02Ni44MzU0IDguNjg4Nkg3MS4xMTI5TDczLjcyNzkgMTguNTk3TDc2LjU5MzQgOC42ODg2SDc5LjkzNTJMODIuNTI1MSAxOC41OTdMODUuMjgyIDguNjg4Nkg4OS4yMDAzTDg0LjU1NTIgMjMuNDA5MUg4MC41NDUxTDc4LjAzODcgMTQuMTY5MUw3NS4zNTcgMjMuNDA5MUg3MS4yOTY3TDY2LjgzNTQgOC42ODg2WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTUzLjI0MjcgMTguNzgwOEg1Ny4wNjA3QzU3LjIzNjEgMjAuMTA5MSA1Ny44OTYxIDIwLjg2OTQgNTkuNjUwNSAyMC44Njk0QzYxLjIyMTIgMjAuODY5NCA2MS45NDggMjAuMjc2MiA2MS45NDggMTkuMjY1M0M2MS45NDggMTguMjU0NCA2MS4xMTI2IDE3LjgyODMgNTguOTczOCAxNy41Mjc2QzU1LjA1NTYgMTYuOTM0NCA1My41NDM0IDE1LjgwNjYgNTMuNTQzNCAxMi45MzI3QzUzLjU0MzQgOS44NjY1OCA1Ni4zNTA1IDguMzQ2MDcgNTkuMzkxNSA4LjM0NjA3QzYyLjY1ODEgOC4zNDYwNyA2NS4xMjI3IDkuNTMyNCA2NS40NzM2IDEyLjkxNTlINjEuNzA1N0M2MS42ODE3IDEyLjY1NDQgNjEuNjA2IDEyLjQwMDIgNjEuNDgzMiAxMi4xNjhDNjEuMzYwMyAxMS45MzU4IDYxLjE5MjcgMTEuNzMwMyA2MC45ODk5IDExLjU2MzNDNjAuNzg3MiAxMS4zOTYyIDYwLjU1MzQgMTEuMjcxMSA2MC4zMDE5IDExLjE5NDlDNjAuMDUwNSAxMS4xMTg4IDU5Ljc4NjUgMTEuMDkzMyA1OS41MjUyIDExLjExOTdINTkuMzk5OUM1OC4wNzk5IDExLjExOTcgNTcuMzExMyAxMS43MzggNTcuMzExMyAxMi42NDAyQzU3LjMxMTMgMTMuNTQyNSA1OC4wMjE0IDEzLjkzNTIgNjAuMTc2OSAxNC4yNDQzQzYzLjgzNjEgMTQuNzk1NyA2NS44ODI5IDE1LjcyMyA2NS44ODI5IDE4Ljg3MjdDNjUuODgyOSAyMi4wMjIzIDYzLjU2ODggMjMuNzA5OSA1OS42OTIzIDIzLjcwOTlDNTUuODE1OCAyMy43MDk5IDUzLjM1MTMgMjEuOTYzOCA1My4yNDI3IDE4Ljc4MDhaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMzcuMDE4NiA4LjY4ODU5SDQxLjA2MjFWMTEuMDE5NUM0MS41MTc5IDEwLjE2MzkgNDIuMjA5NyA5LjQ1NzIxIDQzLjA1NTMgOC45ODMzQzQzLjkwMDkgOC41MDk0IDQ0Ljg2NDggOC4yODgyMiA0NS44MzI1IDguMzQ2MDZDNDguNjk4IDguMzQ2MDYgNTAuNzc4MyAxMC4wOTIxIDUwLjc3ODMgMTQuMDc3MlYyMy40NDI1SDQ2Ljc4NDlWMTQuNjYyQzQ2Ljc4NDkgMTIuNjY1MyA0Ni4wMDc5IDExLjcxMjkgNDQuMjAzNCAxMS43MTI5QzQzLjgyMiAxMS42Nzk3IDQzLjQzNzcgMTEuNzIyMSA0My4wNzI4IDExLjgzNzhDNDIuNzA3OCAxMS45NTM1IDQyLjM2OTMgMTIuMTQwMSA0Mi4wNzY3IDEyLjM4N0M0MS43ODQgMTIuNjMzOCA0MS41NDMgMTIuOTM2IDQxLjM2NzUgMTMuMjc2M0M0MS4xOTE5IDEzLjYxNjUgNDEuMDg1MyAxMy45ODgxIDQxLjA1MzcgMTQuMzY5NkM0MS4wMzI5IDE0LjU0NzIgNDEuMDMyOSAxNC43MjY3IDQxLjA1MzcgMTQuOTA0M1YyMy40MDkxSDM3LjAxODZWOC42ODg1OVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yOS4yMTU1IDQuOTg3NjVDMjkuMjAwOCA0LjU4NDUgMjkuMzA2MSA0LjE4NjA2IDI5LjUxOCAzLjg0Mjc4QzI5LjcyOTkgMy40OTk1IDMwLjAzOSAzLjIyNjgyIDMwLjQwNTkgMy4wNTkyNkMzMC43NzI5IDIuODkxNzEgMzEuMTgxNCAyLjgzNjgxIDMxLjU3OTYgMi45MDE1MkMzMS45Nzc4IDIuOTY2MjMgMzIuMzQ3OCAzLjE0NzYzIDMyLjY0MjkgMy40MjI3N0MzMi45Mzc5IDMuNjk3OTEgMzMuMTQ0NyA0LjA1NDQxIDMzLjIzNyA0LjQ0NzEyQzMzLjMyOTMgNC44Mzk4NCAzMy4zMDMgNS4yNTExMiAzMy4xNjE1IDUuNjI4OUMzMy4wMTk5IDYuMDA2NjcgMzIuNzY5NCA2LjMzMzk0IDMyLjQ0MTggNi41NjkyOEMzMi4xMTQxIDYuODA0NjMgMzEuNzI0IDYuOTM3NDUgMzEuMzIwOCA2Ljk1MDk0SDMxLjI0NTZDMzAuOTk1MyA2Ljk2Njc4IDMwLjc0NDQgNi45MzMwNiAzMC41MDcyIDYuODUxN0MzMC4yNzAxIDYuNzcwMzUgMzAuMDUxMyA2LjY0Mjk3IDI5Ljg2MzQgNi40NzY4NkMyOS42NzU2IDYuMzEwNzYgMjkuNTIyNCA2LjEwOTIgMjkuNDEyNiA1Ljg4Mzc1QzI5LjMwMjkgNS42NTgzIDI5LjIzODcgNS40MTM0IDI5LjIyMzggNS4xNjMxQzI5LjIxNjkgNS4xMDQ4OSAyOS4yMTQxIDUuMDQ2MjYgMjkuMjE1NSA0Ljk4NzY1Wk0yOS4yMTU1IDguNjg4NjdIMzMuMzAwOFYyMy40MDkySDI5LjIzMjJMMjkuMjE1NSA4LjY4ODY3WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTEzLjgxODEgMy4yOTE2M0gyNi43MzQxVjYuODU4OTdIMTguMzc5NlYxMi4xODA3SDI0Ljk5NjNWMTUuNjE0NEgxOC4zNzEzVjIzLjQwOTFIMTMuODE4MVYzLjI5MTYzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTYuMDIzNTUgOS44NzQ5NEM2LjAyMzU1IDExLjEzNjUgNi4wMjM1NSAxMi42NzM3IDQuMjg1ODIgMTMuMzAwM0M2LjA2NTMyIDEzLjkxMDEgNi4wMjM1NSAxNS4yMDUxIDYuMDIzNTUgMTYuNTU4NVYyMS41NzExQzYuMDIzNTUgMjIuNTIzNSA2LjQwNzg1IDIzLjEgNy4wOTI5MSAyMy4yNDJDNy4yNDM0NCAyMy4yOTI4IDcuNDAyMDMgMjMuMzE1NSA3LjU2MDc2IDIzLjMwODlIOS4yMzE2NVYyNi42NTA2SDYuNDc0NjhDMy41MzM5MiAyNi42NTA2IDEuOTEzMTYgMjQuOTc5NyAxLjkxMzE2IDIxLjg4MDNWMTUuOTQ4NkMxLjg5MjMxIDE1LjY0NDEgMS43NTgwNCAxNS4zNTg1IDEuNTM2ODYgMTUuMTQ4MUMxLjMxNTY4IDE0LjkzNzcgMS4wMjM2NyAxNC44MTggMC43MTg0ODEgMTQuODEyNEgwVjExLjg4SDAuNzE4NDgxQzEuMDI5NzYgMTEuODc1OSAxLjMyNzUgMTEuNzUyMSAxLjU0OTk0IDExLjUzNDNDMS43NzIzOSAxMS4zMTY2IDEuOTAyNDYgMTEuMDIxNSAxLjkxMzE2IDEwLjcxMDRWNC42OTUxOUMxLjkxMzE2IDEuNjQ1ODIgMy41MDA1MSAwIDYuNDc0NjggMEg5LjI1NjcxVjMuMjkxNjVINy41ODU4MkM3LjQyNjkgMy4yOTIxMSA3LjI2OTA0IDMuMzE3NDggNy4xMTc5OCAzLjM2Njg0QzYuNDMyOTEgMy41NDIyOCA2LjA0ODYxIDQuMTEwMzggNi4wNDg2MSA1LjAzNzcyTDYuMDIzNTUgOS44NzQ5NFoiIGZpbGw9IndoaXRlIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfOTAxXzY3NiI+CjxyZWN0IHdpZHRoPSIxMzIiIGhlaWdodD0iMjYuNzM0MiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K" alt="logo">
+        </a>
+        <nav class="nav-bar__links link">
+          <a class="link__a active-link" href="front-page.html">Home</a>
+          <a class="link__a" href="about-us.html">About us</a>
+          <a class="link__a" href="sermons.html">Sermon</a>
+          <a class="link__a" href="blog.html">Blog</a>
+        </nav>
+        <div class="nav-bar__button button">
+          <a href="index.html" class="button__text">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <menu>
+    <section class="hero">
+      <div class="container-main">
+        <div class="main-title">
+          <div class="main-title__pre-title">Welcome to our CHURCH</div>
+          <div class="main-title__title heading__1">Become a part of our community</div>
+          <div class="main-title__button button">
+            <div class="button__text">Contact us</div>
+          </div>
+          <ul class="main-title__list">
+            <li type="circle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="relevant">
+      <div class="container-main">
+        <div class="relevant-title">
+          <div class="second-title">
+            <div class="second-title__pre-title "> sub-headline </div>
+            <div class="second-title__title heading__2 relevant__title">a church that's relevant</div>
+          </div>
+        </div>
+        <div class="relevant-blocks">
+
+          <div class="block-info">
+            <div class="block-info__icon">
+              <img src="246fc6acf5c8c46a4014.png" alt="icon about us">
+            </div>
+            <div class="block-info__title heading__4">About us</div>
+            <div class="block-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna
+              aliqua.</div>
+          </div>
+
+          <div class="block-info">
+            <div class="block-info__icon">
+              <img src="e8633f3e3765378f315e.png" alt="icon Get involved">
+            </div>
+            <div class="block-info__title heading__4">Get involved</div>
+            <div class="block-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna
+              aliqua.</div>
+          </div>
+
+          <div class="block-info">
+            <div class="block-info__icon">
+              <img src="d21504a1ea139f8f0c59.png" alt="icon Giving back">
+            </div>
+            <div class="block-info__title heading__4">Giving back</div>
+            <div class="block-info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna
+              aliqua.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="compassion">
+      <div class="container-main">
+        <div class="compassion__title">
+          <div class="second-title">
+            <div class="second-title__pre-title"> sub-headline </div>
+            <div class="second-title__title heading__2">love and compassion</div>
+            <div class="second-title__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis
+              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+          </div>
+          <div class="second-title__button button compassion__button">
+            <a href="blog-post.html" class="button__text">Read more</a>
+          </div>
+        </div>
+        <div class="compassion__image">
+          <div class="img-circle">
+            <img class="img-circle__1 image" src="cb1d5f76c92bcbbb7b75.png" alt="">
+            <img class="img-circle__2 image" src="1f45015c68d735cfcb99.png" alt="">
+            <img class="img-circle__3 image" src="f95e989f51696d16cf20.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="selebrate">
+      <div class="container-main">
+        <div class="selebrate-title">
+          <div class="second-title">
+            <div class="second-title__pre-title"> our mission & vision </div>
+            <div class="second-title__title heading__2">celebrate WITH US</div>
+            <div class="second-title__text selebrate-title__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed
+              do eiusmod
+              tempor incididunt ut labore et dolore magna
+              aliqua.</div>
+            <div class="second-title__link link">
+              <a class="link__text" href="blog-post.html"> Read More </a>
+              <img class="link__arrow" src="8e2a04e7dbcf8ae8fe01.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="benefits">
+      <div class="container-main">
+        <div class="second-title benefits-title">
+          <div class="second-title__pre-title benefits-title__pre-title"> Watch and listen </div>
+          <div class="second-title__title heading__2 benefits-title__title">THE benefits of joining our church</div>
+        </div>
+        <div class="benefits-article">
+          <div class="block-articles">
+
+            <div class="block-article article">
+              <div class="article__img">
+                <img src="6dd5224ff892e30310c2.png" alt="">
+              </div>
+              <div class="article__info">
+                <div class="info">
+                  <div class="info__heading heading__5"> WATCH AND LISTEN TO OUR SERMONS</div>
+                  <div class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-article article">
+              <div class="article__img">
+                <img src="60b3fee50f7ffa98eb69.png" alt="">
+              </div>
+              <div class="article__info">
+                <div class="info">
+                  <div class="info__heading heading__5"> WATCH AND LISTEN TO OUR SERMONS</div>
+                  <div class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-article article">
+              <div class="article__img">
+                <img src="07bb10381077b14c34b3.png" alt="">
+              </div>
+              <div class="article__info">
+                <div class="info">
+                  <div class="info__heading heading__5"> WATCH AND LISTEN TO OUR SERMONS</div>
+                  <div class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="block-article article">
+              <div class="article__img">
+                <img src="59dabf4edd44f30c5b30.png" alt="">
+              </div>
+              <div class="article__info">
+                <div class="info">
+                  <div class="info__heading heading__5"> WATCH AND LISTEN TO OUR SERMONS</div>
+                  <div class="info__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+    <section class="join">
+      <div class="container-main">
+        <div class="second-title join-title">
+          <div class="second-title__pre-title join-title__pre-title"> Upcoming SERMONS </div>
+          <div class="second-title__title heading__2 join-title__title">join us and become part of something great</div>
+        </div>
+        <div class="join-part">
+          <div class="join-part__calendar ">
+
+            <div class="calendar-box calendar">
+              <div class="calendar-container">
+                <div class="calendar__pre-title">Upcoming Event</div>
+                <div class="calendar__title heading__5">WATCH AND LISTEN TO OUR SERMONS</div>
+                <div class="calendar__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor.</div>
+                <div class="calendar__dates">
+                  <div class="date">
+                    <div class="date__icon">
+                      <img src="818f4115dad7d4e1174e.png" alt="">
+                      <img src="d4efab3a5f1af0dd80d7.png" alt="">
+                    </div>
+                    <div class="date__text text">
+                      <div class="text__text">Friday 23:39 IST Saturday 11:20 ISD</div>
+                      <div class="text__text">No 233 Main St. New York, United States</div>
+                    </div>
+                  </div>
+                  <div class="button calendar__button ">
+                    <div class="button__text calendar__button-text">Register</div>
+                  </div>
+                </div>
+                <div class="calendar__number number">
+                  <div class="number__date">20</div>
+                  <div class="number__month">Juli</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="join-part__img">
+            <img src="ca74f26a31e355485c79.png" alt="">
+          </div>
+        </div>
+        <div class="join-part__link second-title__link link">
+          <a class=" join-part__link-text link__text" href="#"> View all Sermons </a>
+          <img class="join-part__link-arrow link__arrow" src="8e2a04e7dbcf8ae8fe01.png" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="serve">
+      <div class="container-main serve-container">
+        <div class="serve-form">
+          <div class="box-form">
+            <div class="box-content">
+              <div class="box-content__title heading__2">
+                We want to serve the world around us
+              </div>
+              <div class="box-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</div>
+              <div class="box-content__button button">
+                <div class="button__text ">Visit</div>
+              </div>
+            </div>
+            <img class='box-form__quotes' src="b5a82c09f020cfa7c4f4.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog">
+      <div class="container-main">
+        <div class="second-title join-title">
+          <div class="second-title__pre-title blog-title__pre-title"> Read our Blog </div>
+          <div class="second-title__title heading__2 blog-title__title">SHARE, INSPIRE, INNOVATE</div>
+        </div>
+
+        <div class="blog-boxs">
+
+          <div class="calendar-box calendar blog-calendar">
+            <div class="calendar-container blog-container">
+              <div class="calendar__pre-title blog-container__pre-title">Relationship</div>
+              <div class="calendar__title heading__5 blog-container__title">WATCH AND LISTEN TO OUR SERMONS</div>
+              <div class="calendar__text blog-container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod
+                tempor.</div>
+              <div class="calendar__dates blog-container__dates">
+                <div class="date">
+                  <div class="date__text text">
+                    <div class="text__text blog__text">By Mathew Johnson</div>
+                    <div class="text__text blog__text">Tuesday 13 May, 2021</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calendar-box calendar blog-calendar">
+            <div class="calendar-container blog-container">
+              <div class="calendar__pre-title blog-container__pre-title">Relationship</div>
+              <div class="calendar__title heading__5 blog-container__title">WATCH AND LISTEN TO OUR SERMONS</div>
+              <div class="calendar__text blog-container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod
+                tempor.</div>
+              <div class="calendar__dates blog-container__dates">
+                <div class="date">
+                  <div class="date__text text">
+                    <div class="text__text blog__text">By Mathew Johnson</div>
+                    <div class="text__text blog__text">Tuesday 13 May, 2021</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calendar-box calendar blog-calendar">
+            <div class="calendar-container blog-container">
+              <div class="calendar__pre-title blog-container__pre-title">Relationship</div>
+              <div class="calendar__title heading__5 blog-container__title">WATCH AND LISTEN TO OUR SERMONS</div>
+              <div class="calendar__text blog-container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod
+                tempor.</div>
+              <div class="calendar__dates blog-container__dates">
+                <div class="date">
+                  <div class="date__text text">
+                    <div class="text__text blog__text">By Mathew Johnson</div>
+                    <div class="text__text blog__text">Tuesday 13 May, 2021</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calendar-box calendar blog-calendar">
+            <div class="calendar-container blog-container">
+              <div class="calendar__pre-title blog-container__pre-title">Relationship</div>
+              <div class="calendar__title heading__5 blog-container__title">WATCH AND LISTEN TO OUR SERMONS</div>
+              <div class="calendar__text blog-container__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod
+                tempor.</div>
+              <div class="calendar__dates blog-container__dates">
+                <div class="date">
+                  <div class="date__text text">
+                    <div class="text__text blog__text">By Mathew Johnson</div>
+                    <div class="text__text blog__text">Tuesday 13 May, 2021</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </menu>
+  <footer class="footer">
+    <div class="container-main">
+      <div class="footer-content">
+
+        <div class="footer-content__contact contact">
+          <div class="contact__logo">
+            <img src="882be7bf246aa27e2f62.png" alt="logo">
+          </div>
+          <div class="contact__autor">© Copyright Finsweet 2022</div>
+
+          <a class="contact-link" href="(480) 555-0103" type="phone">(480) 555-0103</a>
+          <a class="contact-link" href="4517" type="phone">4517 Washington Ave.</a>
+          <a class="contact-link" href="finsweet@example.com" type="e-mail">finsweet@example.com</a>
+
+        </div>
+        <div class="footer-content__link">
+
+          <div class="footer-link__main">Quicklinks</div>
+          <a class="second-link" href="#About us">About us</a>
+          <a class="second-link" href="#Sermons">Sermons</a>
+          <a class="second-link" href="#Events">Events</a>
+          <a class="second-link" href="#Blog">Blog</a>
+
+        </div>
+        <div class="footer-content__connect">
+          <div class="footer-link__main">Connect</div>
+          <div class="connect__img">
+            <img src="fa4dfdf8320fc81b6770.png" alt="">
+            <img src="46a15a9f0b46bc863bf9.png" alt="">
+            <img src="3ecf1f32e861c5560021.png" alt="">
+          </div>
+        </div>
+        <div class="footer-content__form">
+          <div class="footer-form">
+            <div class="footer-form__title heading__4">Subscribe to get Latest Updates and News</div>
+            <form class="form">
+              <input type="email" class="input-email" value="Yourmail@gmail.com">
+              <input type="submit" class="button footer__button" value="Subscribe">
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
