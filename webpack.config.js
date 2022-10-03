@@ -24,7 +24,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
             template: path.resolve(__dirname, './src/front-page.html'), // шаблон
-            filename: 'front-page.html', // название выходного файла
+            filename: 'index.html', // название выходного файла
         }),
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
@@ -54,7 +54,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
             template: path.resolve(__dirname, './src/contact.html'), // шаблон
-            filename: 'index.html', // название выходного файла
+            filename: 'contact.html', // название выходного файла
         }),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
