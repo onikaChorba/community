@@ -92,6 +92,7 @@
 
 .footer-link {
   &__main {
+    text-transform: uppercase;
     color: $white;
     padding-bottom: 20px;
 
@@ -104,6 +105,7 @@
 .second-link {
   color: $white;
   @include font-size (400, 8px, 10px);
+  text-transform: uppercase;
   opacity: 78%;
   padding-bottom: 16px;
   width: 66px;
@@ -131,6 +133,7 @@
 
   &__title {
     color: $white;
+    text-transform: uppercase;
     @include font-size (700, 15px, 18px);
     padding-bottom: 15px;
 
