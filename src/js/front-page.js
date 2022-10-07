@@ -1,12 +1,28 @@
 import $ from "jquery";
 document.addEventListener('DOMContentLoaded', function () {
-  setInterval(() => animateImgCircle(), 5000),
-    headerScroll()
+  // animateImgCircle(),
+  headerScroll()
 })
 
 
+// function createObserver() {
+//   let observer;
+//   const options = {
+//     root: document.querySelector('.img-circle'),
+//     threshold: 1.0,
+//   }
+
+//   observer = new IntersectionObserver(callback, options);
+//   const target = document.querySelectorAll('.image');
+//   observer.observe(target);
+
+//   const callback = (entries, observer) {
+
+//   }
+// }
+
 function animateImgCircle() {
-  const images = document.querySelectorAll('.image');
+  let images = document.querySelectorAll('.image');
   let zeroTop = 0;
   let zeroLeft = 0;
   let zeroTransform = "";
