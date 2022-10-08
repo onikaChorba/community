@@ -169,7 +169,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"99d194f28e8dd8006099.png\";\n\n//# sourceURL=webpack://webpack_template/./src/assets/images/front-page/hero/Line.png?");
+eval("module.exports = __webpack_require__.p + \"972be79c325e57fb6bbd.png\";\n\n//# sourceURL=webpack://webpack_template/./src/assets/images/front-page/hero/Line.png?");
 
 /***/ }),
 
@@ -180,7 +180,7 @@ eval("module.exports = __webpack_require__.p + \"99d194f28e8dd8006099.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"6156f8bb15d7d825e4e1.jpg\";\n\n//# sourceURL=webpack://webpack_template/./src/assets/images/front-page/hero/hero-bakground.jpg?");
+eval("module.exports = __webpack_require__.p + \"1fdec26cd1e6a226e406.jpg\";\n\n//# sourceURL=webpack://webpack_template/./src/assets/images/front-page/hero/hero-bakground.jpg?");
 
 /***/ }),
 
@@ -191,7 +191,7 @@ eval("module.exports = __webpack_require__.p + \"6156f8bb15d7d825e4e1.jpg\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"e40613315d3125079f8f.png\";\n\n//# sourceURL=webpack://webpack_template/./src/assets/images/front-page/serve/background-img.png?");
+eval("module.exports = __webpack_require__.p + \"0cd8c8ba06380bcc28cb.png\";\n\n//# sourceURL=webpack://webpack_template/./src/assets/images/front-page/serve/background-img.png?");
 
 /***/ })
 
@@ -280,7 +280,7 @@ eval("module.exports = __webpack_require__.p + \"e40613315d3125079f8f.png\";\n\n
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("6bb4afd3872cc7a4f8c2")
+/******/ 		__webpack_require__.h = () => ("e7955d647eb566477914")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
