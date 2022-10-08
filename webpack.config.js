@@ -62,7 +62,22 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        // new webpack.optimize.SplitChunksPlugin({
+        //     name: "common"
+        // }),
+
     ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    name: 'commons',
+                    chunks: 'initial',
+                    minChunks: 2,
+                },
+            },
+        },
+    },
     module: {
         rules: [
             // JavaScript
@@ -87,6 +102,14 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
+            {
+                loader: 'image-webpack-loader',
+                options: {
+                    mozjpeg: {
+                        progressive: true,
+                    },
+                }
+            }
         ],
 
     }
