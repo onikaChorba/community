@@ -36,6 +36,7 @@
   z-index: 1000;
   position: relative;
   border-bottom: 16px solid $white;
+  transition-duration: 1.5s;
 
   @include screen-sm {
     width: 60%;
@@ -48,7 +49,6 @@
 
 .serve-form:hover {
   border-bottom: 16px solid $primary;
-  transition-duration: 3s;
 }
 
 .box-content {
