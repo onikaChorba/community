@@ -179,6 +179,7 @@
   max-width: 30%;
   height: 40px;
   border-radius: 12px;
+  text-transform: uppercase;
 
   @include screen-sm {
     max-width: 70%;
