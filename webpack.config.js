@@ -68,15 +68,7 @@ module.exports = {
 
     ],
     optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    name: 'commons',
-                    chunks: 'initial',
-                    minChunks: 2,
-                },
-            },
-        },
+        mergeDuplicateChunks: true,
     },
     module: {
         rules: [
@@ -102,7 +94,6 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
-
         ],
 
     }

@@ -1,29 +1,29 @@
 import $ from "jquery";
 document.addEventListener('DOMContentLoaded', function () {
   headerScroll(),
-    setInterval(() => animateImgCircle(), 5000)
+    setInterval(() => createObserver(), 5000);
 })
 
 
-// function createObserver() {
-//   const options = {
-//     root: document.querySelectorAll('.image'),
-//     threshold: 1.0,
-//   }
+function createObserver() {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1
+  }
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateImgCircle();
+        observer.unobserve(target);
+      }
+    })
+  }, options);
 
-//   const observer = new IntersectionObserver(callback, options);
-//   const target = document.querySelectorAll('.image');
-//   observer.observe(target);
+  const target = document.querySelector('.image');
+  observer.observe(target);
+}
 
-//   const callback = (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting()) {
-//         setInterval(() => animateImgCircle(), 5000);
-//         console.log('hi');
-//       }
-//     })
-//   }
-// }
 
 function animateImgCircle() {
   let images = document.querySelectorAll('.image');
@@ -65,6 +65,8 @@ function animateImgCircle() {
     }
   }
 }
+
+
 
 
 //header
