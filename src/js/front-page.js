@@ -1,70 +1,73 @@
 import $ from "jquery";
 document.addEventListener('DOMContentLoaded', function () {
   headerScroll(),
-    setInterval(() => animateImgCircle(), 5000)
+    createObserver()
 })
 
 
-// function createObserver() {
-//   const options = {
-//     root: document.querySelectorAll('.image'),
-//     threshold: 1.0,
-//   }
+function createObserver() {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1
+  }
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setInterval(() => animateImgCircle(), 5000);
+        observer.unobserve(target);
+      }
+    })
+  }, options);
 
-//   const observer = new IntersectionObserver(callback, options);
-//   const target = document.querySelectorAll('.image');
-//   observer.observe(target);
+  const target = document.querySelector('.image');
+  observer.observe(target);
 
-//   const callback = (entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting()) {
-//         setInterval(() => animateImgCircle(), 5000);
-//         console.log('hi');
-//       }
-//     })
-//   }
-// }
+  function animateImgCircle() {
+    let images = document.querySelectorAll('.image');
+    let zeroTop = 0;
+    let zeroLeft = 0;
+    let zeroTransform = "";
+    for (let i = 0; i < images.length; i++) {
+      let currentElement = images[i];
+      let nextElement = images[i + 1];
+      if (i === 0) {
+        zeroTop = window
+          .getComputedStyle(currentElement, null)
+          .getPropertyValue('top');
+        zeroLeft = window
+          .getComputedStyle(currentElement, null)
+          .getPropertyValue('left');
+        zeroTransform = window
+          .getComputedStyle(currentElement, null)
+          .getPropertyValue('transform');
+      }
+      if (nextElement) {
+        let nextTop = window
+          .getComputedStyle(nextElement, null)
+          .getPropertyValue('top')
+        let nextLeft = window
+          .getComputedStyle(nextElement, null)
+          .getPropertyValue('left')
+        let nextTransform = window
+          .getComputedStyle(nextElement, null)
+          .getPropertyValue('transform');
 
-function animateImgCircle() {
-  let images = document.querySelectorAll('.image');
-  let zeroTop = 0;
-  let zeroLeft = 0;
-  let zeroTransform = "";
-  for (let i = 0; i < images.length; i++) {
-    let currentElement = images[i];
-    let nextElement = images[i + 1];
-    if (i === 0) {
-      zeroTop = window
-        .getComputedStyle(currentElement, null)
-        .getPropertyValue('top');
-      zeroLeft = window
-        .getComputedStyle(currentElement, null)
-        .getPropertyValue('left');
-      zeroTransform = window
-        .getComputedStyle(currentElement, null)
-        .getPropertyValue('transform');
-    }
-    if (nextElement) {
-      let nextTop = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('top')
-      let nextLeft = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('left')
-      let nextTransform = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('transform');
-
-      currentElement.style.top = nextTop;
-      currentElement.style.left = nextLeft;
-      currentElement.style.transform = nextTransform;
-    } else {
-      currentElement.style.top = zeroTop;
-      currentElement.style.left = zeroLeft;
-      currentElement.style.transform = zeroTransform;
+        currentElement.style.top = nextTop;
+        currentElement.style.left = nextLeft;
+        currentElement.style.transform = nextTransform;
+      } else {
+        currentElement.style.top = zeroTop;
+        currentElement.style.left = zeroLeft;
+        currentElement.style.transform = zeroTransform;
+      }
     }
   }
+
 }
+
+
+
 
 
 //header
