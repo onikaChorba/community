@@ -1,9 +1,11 @@
-import $ from "jquery";
+
 document.addEventListener('DOMContentLoaded', function () {
-  headerScroll(),
-    setInterval(() => createObserver(), 5000);
+  createObserver()
 })
 
+document.addEventListener('scroll', function () {
+  headerScroll();
+})
 
 function createObserver() {
   const options = {
@@ -15,7 +17,6 @@ function createObserver() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         animateImgCircle();
-        observer.unobserve(target);
       }
     })
   }, options);
@@ -66,22 +67,62 @@ function animateImgCircle() {
   }
 }
 
+//header
+let prevScrollpos = window.pageYOffset;
+let headerDiv = document.querySelector("header");
+let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
+function headerScroll() {
+  let currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+    headerDiv.style.top = "0";
+  }
+  else {
+    headerDiv.style.top = "-100px";
+  }
+
+  prevScrollpos = currentScrollPos;
+}
+
+// function headerScroll() {
+//   let header = document.querySelector('.header');
+//   let scrollPrev = 0;
+
+
+//   let scrolled = window.pageYOffset;
+//   if (scrolled > 100 && scrolled > scrollPrev) {
+//     header.classList.add('out');
+//   } else {
+//     header.classList.remove('out');
+//   }
+//   scrollPrev = scrolled;
+
+// }
+
+
+  // if (window.scrollY > 0 && window.scrollY > scrollPrev) {
+  //   header.classList.add('out');
+  // } else {
+  //   header.classList.remove('out');
+  // }
+
 
 
 
 //header
-function headerScroll() {
-  var header = $('.header'),
-    scrollPrev = 0;
+// function headerScroll() {
+//   var header = $('.header'),
+//     scrollPrev = 0;
 
-  $(window).scroll(function () {
-    var scrolled = $(window).scrollTop();
+//   $(window).scroll(function () {
+//     var scrolled = $(window).scrollTop();
 
-    if (scrolled > 100 && scrolled > scrollPrev) {
-      header.addClass('out');
-    } else {
-      header.removeClass('out');
-    }
-    scrollPrev = scrolled;
-  });
-}
+//     if (scrolled > 100 && scrolled > scrollPrev) {
+//       header.addClass('out');
+//     } else {
+//       header.removeClass('out');
+//     }
+//     scrollPrev = scrolled;
+//   });
+// }
