@@ -1,9 +1,11 @@
-import $ from "jquery";
+
 document.addEventListener('DOMContentLoaded', function () {
-  headerScroll(),
-    setInterval(() => createObserver(), 5000);
+  createObserver()
 })
 
+document.addEventListener('scroll', function () {
+  headerScroll();
+})
 
 function createObserver() {
   const options = {
@@ -15,7 +17,6 @@ function createObserver() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         animateImgCircle();
-        observer.unobserve(target);
       }
     })
   }, options);
@@ -45,19 +46,10 @@ function animateImgCircle() {
         .getPropertyValue('transform');
     }
     if (nextElement) {
-      let nextTop = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('top')
-      let nextLeft = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('left')
-      let nextTransform = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('transform');
-
-      currentElement.style.top = nextTop;
-      currentElement.style.left = nextLeft;
-      currentElement.style.transform = nextTransform;
+      const { top, left, transform } = getProperties(nextElement)
+      currentElement.style.top = top;
+      currentElement.style.left = left;
+      currentElement.style.transform = transform;
     } else {
       currentElement.style.top = zeroTop;
       currentElement.style.left = zeroLeft;
@@ -65,23 +57,39 @@ function animateImgCircle() {
     }
   }
 }
+function getProperties(element) {
+  const top = window
+    .getComputedStyle(element, null)
+    .getPropertyValue('top')
+  const left = window
+    .getComputedStyle(element, null)
+    .getPropertyValue('left')
+  const transform = window
+    .getComputedStyle(element, null)
+    .getPropertyValue('transform');
 
-
-
+  return {
+    top,
+    left,
+    transform
+  }
+}
 
 //header
+let prevScrollpos = window.pageYOffset;
+let headerDiv = document.querySelector("header");
+let headerBottom = headerDiv.offsetTop + headerDiv.offsetHeight;
+
 function headerScroll() {
-  var header = $('.header'),
-    scrollPrev = 0;
+  let currentScrollPos = window.pageYOffset;
 
-  $(window).scroll(function () {
-    var scrolled = $(window).scrollTop();
+  if (prevScrollpos > currentScrollPos || currentScrollPos < headerBottom) {
+    headerDiv.style.top = "0";
+  }
+  else {
+    headerDiv.style.top = "-100px";
+  }
 
-    if (scrolled > 100 && scrolled > scrollPrev) {
-      header.addClass('out');
-    } else {
-      header.removeClass('out');
-    }
-    scrollPrev = scrolled;
-  });
+  prevScrollpos = currentScrollPos;
 }
+

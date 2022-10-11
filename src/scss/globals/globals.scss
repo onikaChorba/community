@@ -69,19 +69,24 @@ a {
 @media (max-width:1300px) {
   .heading {
     &__1 {
-      @include font-size(700, 44px, 62px);
+      @include font-size(700, 44px, 52px);
     }
 
     &__2 {
-      @include font-size(700, 28px, 44px);
+      @include font-size(700, 28px, 32px);
     }
 
     &__3 {
-      @include font-size(700, 20px, 36px);
+      @include font-size(700, 20px, 30px);
     }
 
     &__4 {
-      @include font-size(700, 12px, 24px);
+      @include font-size(700, 24px, 24px);
+    }
+
+    &__5 {
+      @include font-size(700, 22px, 27px);
+      letter-spacing: -1%;
     }
 
     &__6 {

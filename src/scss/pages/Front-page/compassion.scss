@@ -65,6 +65,7 @@
   justify-content: center;
   position: relative;
   padding-bottom: 64px;
+  height: 350px;
 
   &__1 {
     position: absolute;
@@ -75,7 +76,7 @@
 
   &__2 {
     position: absolute;
-    top: 48px;
+    top: 5%;
     left: 38.5%;
     transform: scale(1.3);
   }
