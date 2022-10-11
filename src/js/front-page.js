@@ -46,24 +46,32 @@ function animateImgCircle() {
         .getPropertyValue('transform');
     }
     if (nextElement) {
-      let nextTop = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('top')
-      let nextLeft = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('left')
-      let nextTransform = window
-        .getComputedStyle(nextElement, null)
-        .getPropertyValue('transform');
-
-      currentElement.style.top = nextTop;
-      currentElement.style.left = nextLeft;
-      currentElement.style.transform = nextTransform;
+      const { top, left, transform } = getProperties(nextElement)
+      currentElement.style.top = top;
+      currentElement.style.left = left;
+      currentElement.style.transform = transform;
     } else {
       currentElement.style.top = zeroTop;
       currentElement.style.left = zeroLeft;
       currentElement.style.transform = zeroTransform;
     }
+  }
+}
+function getProperties(element) {
+  const top = window
+    .getComputedStyle(element, null)
+    .getPropertyValue('top')
+  const left = window
+    .getComputedStyle(element, null)
+    .getPropertyValue('left')
+  const transform = window
+    .getComputedStyle(element, null)
+    .getPropertyValue('transform');
+
+  return {
+    top,
+    left,
+    transform
   }
 }
 
@@ -85,44 +93,3 @@ function headerScroll() {
   prevScrollpos = currentScrollPos;
 }
 
-// function headerScroll() {
-//   let header = document.querySelector('.header');
-//   let scrollPrev = 0;
-
-
-//   let scrolled = window.pageYOffset;
-//   if (scrolled > 100 && scrolled > scrollPrev) {
-//     header.classList.add('out');
-//   } else {
-//     header.classList.remove('out');
-//   }
-//   scrollPrev = scrolled;
-
-// }
-
-
-  // if (window.scrollY > 0 && window.scrollY > scrollPrev) {
-  //   header.classList.add('out');
-  // } else {
-  //   header.classList.remove('out');
-  // }
-
-
-
-
-//header
-// function headerScroll() {
-//   var header = $('.header'),
-//     scrollPrev = 0;
-
-//   $(window).scroll(function () {
-//     var scrolled = $(window).scrollTop();
-
-//     if (scrolled > 100 && scrolled > scrollPrev) {
-//       header.addClass('out');
-//     } else {
-//       header.removeClass('out');
-//     }
-//     scrollPrev = scrolled;
-//   });
-// }
